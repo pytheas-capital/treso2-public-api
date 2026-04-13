@@ -1,0 +1,28 @@
+meta {
+  name: Mettre à jour un approbateur métier
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/v3/business-validators/:businessValidatorId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  businessValidatorId: 
+}
+
+body:json {
+  {
+    "validatorEmail": "",
+    "internalCode": "",
+    "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
+    "validatorFirstName": "",
+    "validatorLastName": "",
+    "nextValidatorEmail": "",
+    "rank": "",
+    "parentBusinessUnitCode": ""
+  }
+}

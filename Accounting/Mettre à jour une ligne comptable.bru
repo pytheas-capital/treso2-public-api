@@ -1,0 +1,27 @@
+meta {
+  name: Mettre à jour une ligne comptable
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/v3/accounting/:id/ledger-entry/:accountNumber
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 
+  accountNumber: 
+}
+
+body:json {
+  {
+    "accountNumber": "A102030",
+    "auxiliaryAccountNumber": "FOURNISSEUR",
+    "description": "Charges d'exploitation",
+    "vatCode": "VAT20",
+    "amount": "2000",
+    "type": "DEBIT"
+  }
+}

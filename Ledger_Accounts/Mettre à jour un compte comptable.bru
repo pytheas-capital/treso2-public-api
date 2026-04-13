@@ -1,0 +1,23 @@
+meta {
+  name: Mettre à jour un compte comptable
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v3/ledger-accounts/:ledgerAccountId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  ledgerAccountId: 
+}
+
+body:json {
+  {
+    "number": "A102030",
+    "label": "Charges d'exploitation",
+    "active": true
+  }
+}

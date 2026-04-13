@@ -1,0 +1,28 @@
+meta {
+  name: Récupérer les axes analytiques
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v3/analytical-axes
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  companyRegistrationId: 807708243 ou 12345678A
+  subsidiaryRegistrationId: 80770824300066 ou MONACOXXX00000
+  ~key: 
+  ~label: 
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+  ~sort: key-asc
+  ~sort: key-desc
+  ~sort: label-asc
+  ~sort: label-desc
+}

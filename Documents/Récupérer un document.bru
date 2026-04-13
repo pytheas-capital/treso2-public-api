@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un document
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/documents/:invoiceId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}

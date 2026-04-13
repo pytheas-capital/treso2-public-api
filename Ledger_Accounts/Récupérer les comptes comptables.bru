@@ -1,0 +1,29 @@
+meta {
+  name: Récupérer les comptes comptables
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v3/ledger-accounts
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  companyRegistrationId: 807708243 ou 12345678A
+  subsidiaryRegistrationId: 80770824300066 ou MONACOXXX00000
+  ~number: 
+  ~label: 
+  ~active: 
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+  ~sort: number-asc
+  ~sort: number-desc
+  ~sort: label-asc
+  ~sort: label-desc
+}

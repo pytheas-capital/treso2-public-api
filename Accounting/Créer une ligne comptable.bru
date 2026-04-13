@@ -1,0 +1,37 @@
+meta {
+  name: Créer une ligne comptable
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v3/accounting/:id/ledger-entry
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 
+}
+
+body:json {
+  {
+    "accountNumber": "A102030",
+    "auxiliaryAccountNumber": "FOURNISSEUR",
+    "description": "Charges d'exploitation",
+    "vatCode": "VAT20",
+    "amount": "2000",
+    "type": "DEBIT",
+    "axes": [
+      {
+        "axisKey": "DEPARTEMENT",
+        "codes": [
+          {
+            "code": "DEPT001",
+            "amount": 2000
+          }
+        ]
+      }
+    ]
+  }
+}

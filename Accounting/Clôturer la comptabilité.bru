@@ -1,0 +1,15 @@
+meta {
+  name: Clôturer la comptabilité
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v3/accounting/:id/close
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}

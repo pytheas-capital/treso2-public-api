@@ -1,0 +1,43 @@
+meta {
+  name: Récupérer les codes TVA
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v3/vat-codes
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  companyRegistrationId: 807708243 ou 12345678A
+  subsidiaryRegistrationId: 80770824300066 ou MONACOXXX00000
+  ~code: 
+  ~label: 
+  ~percentage: 
+  ~countryCode: 
+  ~vatCollectedAccount: 
+  ~vatDeductibleAccount: 
+  ~active: 
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+  ~sort: code-asc
+  ~sort: code-desc
+  ~sort: label-asc
+  ~sort: label-desc
+  ~sort: percentage-asc
+  ~sort: percentage-desc
+  ~sort: countryCode-asc
+  ~sort: countryCode-desc
+  ~sort: vatCollectedAccount-asc
+  ~sort: vatCollectedAccount-desc
+  ~sort: vatDeductibleAccount-asc
+  ~sort: vatDeductibleAccount-desc
+  ~sort: active-asc
+  ~sort: active-desc
+}

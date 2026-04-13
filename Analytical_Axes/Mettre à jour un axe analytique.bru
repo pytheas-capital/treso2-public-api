@@ -1,0 +1,30 @@
+meta {
+  name: Mettre à jour un axe analytique
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v3/analytical-axes/:analyticalAxisId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  analyticalAxisId: 
+}
+
+body:json {
+  {
+    "companyId": "company-uuid-123",
+    "key": "DEPARTMENT",
+    "label": "Département",
+    "analyticalCodes": [
+      {
+        "code": "DEPT001",
+        "label": "Département des ventes",
+        "active": true
+      }
+    ]
+  }
+}

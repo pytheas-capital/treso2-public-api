@@ -1,0 +1,193 @@
+info:
+  name: Rattacher le lisible PDF à une facture
+  type: http
+  seq: 10
+  tags:
+    - Invoices
+
+http:
+  method: POST
+  url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+  params:
+    - name: invoiceId
+      value: ""
+      type: path
+      description: Identifiant unique de la facture (UUID)
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: invoice-readable.pdf
+      - name: file
+        type: file
+        value: []
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 204 Response
+    description: Lisible rattaché avec succès
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+      method: POST
+      params:
+        - name: invoiceId
+          value: ""
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: invoice-readable.pdf
+          - name: file
+            type: file
+            value: []
+    response:
+      status: 204
+      statusText: No Content
+      body:
+        type: text
+        data: ""
+  - name: 400 Response
+    description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+      method: POST
+      params:
+        - name: invoiceId
+          value: ""
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: invoice-readable.pdf
+          - name: file
+            type: file
+            value: []
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: text
+        data: ""
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+      method: POST
+      params:
+        - name: invoiceId
+          value: ""
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: invoice-readable.pdf
+          - name: file
+            type: file
+            value: []
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+      method: POST
+      params:
+        - name: invoiceId
+          value: ""
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: invoice-readable.pdf
+          - name: file
+            type: file
+            value: []
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 404 Response
+    description: Facture non trouvée
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+      method: POST
+      params:
+        - name: invoiceId
+          value: ""
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: invoice-readable.pdf
+          - name: file
+            type: file
+            value: []
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/readable"
+      method: POST
+      params:
+        - name: invoiceId
+          value: ""
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: invoice-readable.pdf
+          - name: file
+            type: file
+            value: []
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Rattacher ou remplacer le lisible PDF d'une facture.
+
+  **Cycle de vie:**
+  - autorisé sur brouillon
+  - autorisé sur facture finale uniquement tant qu'aucun lisible n'a encore été téléversé
+  - remplacement interdit sur facture finale après premier téléversement
+  - ne modifie aucun champ BT-* métier
+  - met uniquement à jour la pièce jointe lisible exposée avec la facture

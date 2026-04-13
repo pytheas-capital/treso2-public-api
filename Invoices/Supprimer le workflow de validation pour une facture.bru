@@ -1,0 +1,15 @@
+meta {
+  name: Supprimer le workflow de validation pour une facture
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/abort-validation
+  body: none
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Rattacher un fichier PDF à un bon de réception
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v3/receipt-slips/:receiptSlipId/file
+  body: json
+  auth: inherit
+}
+
+params:path {
+  receiptSlipId: 
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}

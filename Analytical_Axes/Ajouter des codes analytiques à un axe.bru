@@ -1,0 +1,27 @@
+meta {
+  name: Ajouter des codes analytiques à un axe
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/v3/analytical-axes/:analyticalAxisId/analytical-codes
+  body: json
+  auth: inherit
+}
+
+params:path {
+  analyticalAxisId: 
+}
+
+body:json {
+  {
+    "codes": [
+      {
+        "code": "DEPT001",
+        "label": "Département des ventes",
+        "active": true
+      }
+    ]
+  }
+}

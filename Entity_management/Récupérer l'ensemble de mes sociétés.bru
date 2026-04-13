@@ -1,0 +1,16 @@
+meta {
+  name: Récupérer l'ensemble de mes sociétés
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v3/companies/my-companies
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+}

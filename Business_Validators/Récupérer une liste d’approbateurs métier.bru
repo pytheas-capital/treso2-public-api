@@ -1,0 +1,20 @@
+meta {
+  name: Récupérer une liste d’approbateurs métier
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/business-validators
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+}

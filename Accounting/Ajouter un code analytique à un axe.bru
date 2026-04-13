@@ -1,0 +1,24 @@
+meta {
+  name: Ajouter un code analytique à un axe
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v3/accounting/:id/ledger-entry/:accountNumber/axes/:axisKey/analytical-code
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 
+  accountNumber: 
+  axisKey: 
+}
+
+body:json {
+  {
+    "code": "DEPT001",
+    "amount": "2000"
+  }
+}

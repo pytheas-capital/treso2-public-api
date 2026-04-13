@@ -1,0 +1,15 @@
+meta {
+  name: Annuler un bon de réception
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v3/receipt-slips/:receiptSlipId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  receiptSlipId: 
+}

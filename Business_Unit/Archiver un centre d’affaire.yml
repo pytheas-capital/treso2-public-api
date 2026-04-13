@@ -1,0 +1,108 @@
+info:
+  name: Archiver un centre d’affaire
+  type: http
+  seq: 5
+  tags:
+    - Business_Unit
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/v3/business-units/:businessUnitId"
+  params:
+    - name: businessUnitId
+      value: ""
+      type: path
+      description: Identifiant unique du centre d’affaire au sein de TRESO2
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: Le centre d’affaire a été archivé avec succès.
+    request:
+      url: "{{baseUrl}}/v3/business-units/:businessUnitId"
+      method: DELETE
+      params:
+        - name: businessUnitId
+          value: ""
+          type: path
+          description: Identifiant unique du centre d’affaire au sein de TRESO2
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""
+  - name: 400 Response
+    description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
+    request:
+      url: "{{baseUrl}}/v3/business-units/:businessUnitId"
+      method: DELETE
+      params:
+        - name: businessUnitId
+          value: ""
+          type: path
+          description: Identifiant unique du centre d’affaire au sein de TRESO2
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: text
+        data: ""
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/business-units/:businessUnitId"
+      method: DELETE
+      params:
+        - name: businessUnitId
+          value: ""
+          type: path
+          description: Identifiant unique du centre d’affaire au sein de TRESO2
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/business-units/:businessUnitId"
+      method: DELETE
+      params:
+        - name: businessUnitId
+          value: ""
+          type: path
+          description: Identifiant unique du centre d’affaire au sein de TRESO2
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/business-units/:businessUnitId"
+      method: DELETE
+      params:
+        - name: businessUnitId
+          value: ""
+          type: path
+          description: Identifiant unique du centre d’affaire au sein de TRESO2
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Cette ressource permet d’archiver un centre d’affaire.
+  Si le centre d’affaire n’est pas trouvé, une erreur 404 sera retournée.

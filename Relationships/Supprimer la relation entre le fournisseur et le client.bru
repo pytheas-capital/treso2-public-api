@@ -1,0 +1,18 @@
+meta {
+  name: Supprimer la relation entre le fournisseur et le client
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{baseUrl}}/v3/relationships
+  body: none
+  auth: inherit
+}
+
+params:query {
+  customer_id: 
+  supplier_id: 
+  type: supplier
+  ~type: customer
+}

@@ -1,0 +1,7 @@
+info:
+  name: Custom_fields
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

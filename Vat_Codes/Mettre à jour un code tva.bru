@@ -1,0 +1,27 @@
+meta {
+  name: Mettre à jour un code tva
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v3/vat-codes/:vatCodeId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  vatCodeId: 
+}
+
+body:json {
+  {
+    "code": "VAT_20",
+    "label": "TVA 20%",
+    "percentage": 20,
+    "countryCode": "FR",
+    "vatCollectedAccount": "445710",
+    "vatDeductibleAccount": "445660",
+    "active": true
+  }
+}

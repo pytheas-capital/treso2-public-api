@@ -1,0 +1,21 @@
+meta {
+  name: Rattacher un fichier PDF à un bon de commande
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v3/purchase-orders/:purchaseOrderId/file
+  body: json
+  auth: inherit
+}
+
+params:path {
+  purchaseOrderId: 
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}

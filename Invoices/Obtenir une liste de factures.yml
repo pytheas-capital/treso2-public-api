@@ -1,0 +1,3262 @@
+info:
+  name: Obtenir une liste de factures
+  type: http
+  seq: 4
+  tags:
+    - Invoices
+
+http:
+  method: GET
+  url: "{{baseUrl}}/v3/invoices"
+  params:
+    - name: offset
+      value: "1"
+      type: query
+      description: Numéro de page souhaité
+    - name: limit
+      value: "25"
+      type: query
+      description: Nombre d'éléments à retourner par page (Maximum 100)
+    - name: invoice_id
+      value: 123e4567-e89b-12d3-a456-426614174000
+      type: query
+      description: "Identifiant de facture (UUID généré par la plateforme) [Spec: API-only]"
+    - name: invoicing_context
+      value: B2Bd
+      type: query
+      description: "Filtre par contexte de facturation [Spec: API-only]"
+      disabled: true
+    - name: invoicing_context
+      value: B2Bi
+      type: query
+      description: "Filtre par contexte de facturation [Spec: API-only]"
+      disabled: true
+    - name: invoicing_context
+      value: B2G
+      type: query
+      description: "Filtre par contexte de facturation [Spec: API-only]"
+      disabled: true
+    - name: invoicing_context
+      value: B2C
+      type: query
+      description: "Filtre par contexte de facturation [Spec: API-only]"
+      disabled: true
+    - name: seller_id
+      value: 123e4567-e89b-12d3-a456-426614174000
+      type: query
+      description: Identifiant du vendeur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+    - name: buyer_id
+      value: "123456789"
+      type: query
+      description: Identifiant de l'acheteur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+    - name: due_date
+      value: 2026-01-31
+      type: query
+      description: Filtre par date d'échéance
+    - name: issue_date
+      value: 2026-01-01
+      type: query
+      description: Filtre par date d'émission
+    - name: issue_date_from
+      value: 2026-01-01
+      type: query
+      description: Date de début de la plage d'émission (incluse)
+    - name: issue_date_to
+      value: 2026-12-31
+      type: query
+      description: Date de fin de la plage d'émission (incluse)
+    - name: document_id
+      value: INV-2026-001
+      type: query
+      description: "Référence du document (numéro de facture fournisseur) [Spec: API-only]"
+    - name: internal_document_id
+      value: INT-001
+      type: query
+      description: "Référence interne du document [Spec: API-only]"
+    - name: purchase_order_id
+      value: PO-2026-001
+      type: query
+      description: Référence du bon de commande (BT-13)
+    - name: status
+      value: "200"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "201"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "202"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "203"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "204"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "205"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "206"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "207"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "208"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "209"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "210"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "211"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "212"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "213"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "224"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "225"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "226"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "227"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "228"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "225"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "226"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "227"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: status
+      value: "228"
+      type: query
+      description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+      disabled: true
+    - name: item_type
+      value: "261"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "262"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "380"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "381"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "384"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "386"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "389"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "393"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "396"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "471"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "472"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "473"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "500"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "501"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "502"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: item_type
+      value: "503"
+      type: query
+      description: |
+        Type de document (codes UNTDID 1001) :
+        - **380** => Facture commerciale
+        - **381** => Avoir
+        - **384** => Facture rectificative
+        - **386** => Facture d'acompte
+      disabled: true
+    - name: sort
+      value: issueDate-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: issueDate-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: dueDate-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: dueDate-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: documentId-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: documentId-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: currency-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: currency-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: status-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: status-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: createdAt-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: createdAt-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: updatedAt-asc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: sort
+      value: updatedAt-desc
+      type: query
+      description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+      disabled: true
+    - name: fields
+      value: invoiceId
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: documentId
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: internalDocumentId
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: invoicingContext
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: itemType
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: issueDate
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: dueDate
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: currency
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: status
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: operationCategory
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: purchaseOrderId
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: businessUnitCode
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: correctedDocumentId
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: correctedIssueDate
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: invoicingStartDate
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: invoicingEndDate
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: seller
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: buyer
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: sellerTaxRepresentative
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: singleTaxPayer
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: deliveryInformation
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: lineItems
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: allowances
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: charges
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: total
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: vatBreakdown
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: payment
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: payments
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: notes
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: buyerCustomFields
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: createdAt
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: fields
+      value: updatedAt
+      type: query
+      description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+      disabled: true
+    - name: buyer_is_individual
+      value: "true"
+      type: query
+      description: "Nature de l’acheteur : true pour un particulier (B2C), false pour une société (B2B) [Spec: API-only]"
+    - name: buyer_first_name
+      value: Jean
+      type: query
+      description: "Prénom de l’acheteur (B2C) [Spec: API-only]"
+    - name: buyer_last_name
+      value: Dupont
+      type: query
+      description: "Nom de famille de l’acheteur (B2C) [Spec: API-only]"
+    - name: buyer_email
+      value: jean.dupont@example.com
+      type: query
+      description: "Email de l’acheteur [Spec: API-only]"
+    - name: buyer_internal_code
+      value: CUST-001
+      type: query
+      description: "Code interne de l’acheteur [Spec: API-only]"
+    - name: accounting_is_closed
+      value: "true"
+      type: query
+      description: "Filtre par statut de clôture comptable [Spec: API-only]"
+    - name: custom_fields
+      value: "[object Object]"
+      type: query
+      description: |-
+        Filtre par paires clé-valeur de champs personnalisés. Prend en charge uniquement les types SINGLE et MULTIPLE.
+
+         [Spec: API-only]Format : `custom_fields[key]=value` pour une valeur unique, `custom_fields[key]=val1&custom_fields[key]=val2` pour plusieurs valeurs.
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: Liste de factures ou tableau vide
+    request:
+      url: "{{baseUrl}}/v3/invoices"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: invoice_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: "Identifiant de facture (UUID généré par la plateforme) [Spec: API-only]"
+        - name: invoicing_context
+          value: B2Bd
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2Bi
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2G
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2C
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: seller_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: Identifiant du vendeur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: buyer_id
+          value: "123456789"
+          type: query
+          description: Identifiant de l'acheteur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: due_date
+          value: 2026-01-31
+          type: query
+          description: Filtre par date d'échéance
+        - name: issue_date
+          value: 2026-01-01
+          type: query
+          description: Filtre par date d'émission
+        - name: issue_date_from
+          value: 2026-01-01
+          type: query
+          description: Date de début de la plage d'émission (incluse)
+        - name: issue_date_to
+          value: 2026-12-31
+          type: query
+          description: Date de fin de la plage d'émission (incluse)
+        - name: document_id
+          value: INV-2026-001
+          type: query
+          description: "Référence du document (numéro de facture fournisseur) [Spec: API-only]"
+        - name: internal_document_id
+          value: INT-001
+          type: query
+          description: "Référence interne du document [Spec: API-only]"
+        - name: purchase_order_id
+          value: PO-2026-001
+          type: query
+          description: Référence du bon de commande (BT-13)
+        - name: status
+          value: "200"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "201"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "202"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "203"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "204"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "205"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "206"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "207"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "208"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "209"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "210"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "211"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "212"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "213"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "224"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: item_type
+          value: "261"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "262"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "380"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "381"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "384"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "386"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "389"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "393"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "396"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "471"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "472"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "473"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "500"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "501"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "502"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "503"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: sort
+          value: issueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: issueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: fields
+          value: invoiceId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: documentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: internalDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingContext
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: itemType
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: issueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: dueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: currency
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: status
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: operationCategory
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: purchaseOrderId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: businessUnitCode
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedIssueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingStartDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingEndDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: seller
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: sellerTaxRepresentative
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: singleTaxPayer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: deliveryInformation
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: lineItems
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: allowances
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: charges
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: total
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: vatBreakdown
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payment
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payments
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: notes
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyerCustomFields
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: createdAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: updatedAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: buyer_is_individual
+          value: "true"
+          type: query
+          description: "Nature de l’acheteur : true pour un particulier (B2C), false pour une société (B2B) [Spec: API-only]"
+        - name: buyer_first_name
+          value: Jean
+          type: query
+          description: "Prénom de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_last_name
+          value: Dupont
+          type: query
+          description: "Nom de famille de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_email
+          value: jean.dupont@example.com
+          type: query
+          description: "Email de l’acheteur [Spec: API-only]"
+        - name: buyer_internal_code
+          value: CUST-001
+          type: query
+          description: "Code interne de l’acheteur [Spec: API-only]"
+        - name: accounting_is_closed
+          value: "true"
+          type: query
+          description: "Filtre par statut de clôture comptable [Spec: API-only]"
+        - name: custom_fields
+          value: "[object Object]"
+          type: query
+          description: |-
+            Filtre par paires clé-valeur de champs personnalisés. Prend en charge uniquement les types SINGLE et MULTIPLE.
+
+             [Spec: API-only]Format : `custom_fields[key]=value` pour une valeur unique, `custom_fields[key]=val1&custom_fields[key]=val2` pour plusieurs valeurs.
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
+              "documentId": "INV-2026-001",
+              "internalDocumentId": "INT-001",
+              "invoicingContext": "B2Bd",
+              "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+              "itemType": "380",
+              "issueDate": "2026-01-15",
+              "dueDate": "2026-02-15",
+              "currency": "EUR",
+              "status": 225,
+              "vatDueDateCode": "3",
+              "operationCategory": "B1",
+              "purchaseOrderId": "PO-2026-001",
+              "contractRef": "CONTRACT-2026-001",
+              "buyerReference": "EJ-2026-MAIRIE-00456",
+              "typeOfContract": "FRAMEWORK",
+              "precedingInvoice": "",
+              "incoterms": "",
+              "businessUnitCode": "BU-001",
+              "taxCurrencyCode": "EUR",
+              "projectRef": "PRJ-2026-CRM",
+              "tenderRef": "TO-2026-001",
+              "objectRef": "OBJ-2026-001",
+              "objectRefSchemeId": "APT",
+              "objectRefs": [
+                "OBJ-2026-001",
+                "OBJ-2026-002"
+              ],
+              "invoicingStartDate": "2026-01-01",
+              "invoicingEndDate": "2026-01-31",
+              "seller": "",
+              "buyer": "",
+              "payee": "",
+              "payer": "",
+              "thirdPartyInvoicer": "",
+              "buyerAgent": "",
+              "sellerAgent": "",
+              "invoicee": "",
+              "sellerTaxRepresentative": "",
+              "singleTaxPayer": "",
+              "deliveryInformation": "",
+              "notes": [
+                {
+                  "code": "AAA",
+                  "text": "Note text content"
+                }
+              ],
+              "lineItems": [
+                {
+                  "number": 1,
+                  "reference": "PROD-001",
+                  "name": "Product Name",
+                  "designation": "Product Description",
+                  "unitPriceHT": 100,
+                  "quantity": 2,
+                  "unit": "C62",
+                  "discountAmount": 10,
+                  "charge": 5,
+                  "totalAmountHT": 195,
+                  "vatCodeType": "S",
+                  "taxeRate": 20,
+                  "invoicingStartDate": "2026-01-01",
+                  "invoicingEndDate": "2026-01-31",
+                  "lineBuyerOrderId": "PO-L1",
+                  "linePrecedingInvoice": "",
+                  "lineDespatchAdvice": "",
+                  "lineReceiptAdvice": "",
+                  "lineSellerOrder": "",
+                  "lineDelivery": "",
+                  "parentLineId": "LINE-001",
+                  "lineSubType": "DETAIL",
+                  "parentLineQuantity": 2,
+                  "parentLineQuantityUnit": "EA",
+                  "lineSeller": "",
+                  "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
+                  "lineVatExemptionCode": "VATEX-EU-O",
+                  "lineVatDueDateCode": "3",
+                  "lineNoteSubjectCode": "REG",
+                  "articleAttributes": [
+                    {
+                      "code": "6313",
+                      "value": "42",
+                      "unit": "C62"
+                    }
+                  ],
+                  "note": "Line item note"
+                }
+              ],
+              "allowances": [
+                {
+                  "amount": 50,
+                  "vatCodeType": "S",
+                  "vatRate": 20,
+                  "vatExemptionText": "Exonération de TVA sur remise documentaire",
+                  "vatExemptionCode": "VATEX-EU-O"
+                }
+              ],
+              "charges": [
+                {
+                  "amount": 25,
+                  "vatCodeType": "S",
+                  "vatRate": 20,
+                  "vatExemptionText": "Exonération de TVA sur charge documentaire",
+                  "vatExemptionCode": "VATEX-EU-O"
+                }
+              ],
+              "total": "",
+              "vatBreakdown": [
+                {
+                  "amountHT": 500,
+                  "vatCodeType": "S",
+                  "vatRate": 20,
+                  "vatAmount": 100,
+                  "exemptionCode": "VATEX-EU-AE",
+                  "exemptionReason": "Exemption reason text"
+                }
+              ],
+              "payment": "",
+              "payments": [
+                {
+                  "id": "0199f8b0-1c2d-4f3e-b2d0-123456789abc",
+                  "amount": 500,
+                  "date": "2026-02-01",
+                  "method": "bank_transfer",
+                  "reference": "PAY-2026-001",
+                  "notes": "Partial payment via bank transfer",
+                  "createdAt": "2026-02-01T10:30:00.000Z",
+                  "createdBy": "user@example.com"
+                }
+              ],
+              "buyerCustomFields": [
+                {
+                  "key": "custom_field_1",
+                  "value": [
+                    "value1",
+                    "value2"
+                  ]
+                }
+              ],
+              "createdAt": "2026-01-15T10:30:00.000Z",
+              "updatedAt": "2026-01-15T14:45:00.000Z"
+            }
+          ]
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/invoices"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: invoice_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: "Identifiant de facture (UUID généré par la plateforme) [Spec: API-only]"
+        - name: invoicing_context
+          value: B2Bd
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2Bi
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2G
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2C
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: seller_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: Identifiant du vendeur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: buyer_id
+          value: "123456789"
+          type: query
+          description: Identifiant de l'acheteur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: due_date
+          value: 2026-01-31
+          type: query
+          description: Filtre par date d'échéance
+        - name: issue_date
+          value: 2026-01-01
+          type: query
+          description: Filtre par date d'émission
+        - name: issue_date_from
+          value: 2026-01-01
+          type: query
+          description: Date de début de la plage d'émission (incluse)
+        - name: issue_date_to
+          value: 2026-12-31
+          type: query
+          description: Date de fin de la plage d'émission (incluse)
+        - name: document_id
+          value: INV-2026-001
+          type: query
+          description: "Référence du document (numéro de facture fournisseur) [Spec: API-only]"
+        - name: internal_document_id
+          value: INT-001
+          type: query
+          description: "Référence interne du document [Spec: API-only]"
+        - name: purchase_order_id
+          value: PO-2026-001
+          type: query
+          description: Référence du bon de commande (BT-13)
+        - name: status
+          value: "200"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "201"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "202"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "203"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "204"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "205"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "206"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "207"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "208"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "209"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "210"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "211"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "212"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "213"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "224"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: item_type
+          value: "261"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "262"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "380"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "381"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "384"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "386"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "389"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "393"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "396"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "471"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "472"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "473"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "500"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "501"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "502"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "503"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: sort
+          value: issueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: issueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: fields
+          value: invoiceId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: documentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: internalDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingContext
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: itemType
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: issueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: dueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: currency
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: status
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: operationCategory
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: purchaseOrderId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: businessUnitCode
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedIssueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingStartDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingEndDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: seller
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: sellerTaxRepresentative
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: singleTaxPayer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: deliveryInformation
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: lineItems
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: allowances
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: charges
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: total
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: vatBreakdown
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payment
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payments
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: notes
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyerCustomFields
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: createdAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: updatedAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: buyer_is_individual
+          value: "true"
+          type: query
+          description: "Nature de l’acheteur : true pour un particulier (B2C), false pour une société (B2B) [Spec: API-only]"
+        - name: buyer_first_name
+          value: Jean
+          type: query
+          description: "Prénom de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_last_name
+          value: Dupont
+          type: query
+          description: "Nom de famille de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_email
+          value: jean.dupont@example.com
+          type: query
+          description: "Email de l’acheteur [Spec: API-only]"
+        - name: buyer_internal_code
+          value: CUST-001
+          type: query
+          description: "Code interne de l’acheteur [Spec: API-only]"
+        - name: accounting_is_closed
+          value: "true"
+          type: query
+          description: "Filtre par statut de clôture comptable [Spec: API-only]"
+        - name: custom_fields
+          value: "[object Object]"
+          type: query
+          description: |-
+            Filtre par paires clé-valeur de champs personnalisés. Prend en charge uniquement les types SINGLE et MULTIPLE.
+
+             [Spec: API-only]Format : `custom_fields[key]=value` pour une valeur unique, `custom_fields[key]=val1&custom_fields[key]=val2` pour plusieurs valeurs.
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/invoices"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: invoice_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: "Identifiant de facture (UUID généré par la plateforme) [Spec: API-only]"
+        - name: invoicing_context
+          value: B2Bd
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2Bi
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2G
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2C
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: seller_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: Identifiant du vendeur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: buyer_id
+          value: "123456789"
+          type: query
+          description: Identifiant de l'acheteur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: due_date
+          value: 2026-01-31
+          type: query
+          description: Filtre par date d'échéance
+        - name: issue_date
+          value: 2026-01-01
+          type: query
+          description: Filtre par date d'émission
+        - name: issue_date_from
+          value: 2026-01-01
+          type: query
+          description: Date de début de la plage d'émission (incluse)
+        - name: issue_date_to
+          value: 2026-12-31
+          type: query
+          description: Date de fin de la plage d'émission (incluse)
+        - name: document_id
+          value: INV-2026-001
+          type: query
+          description: "Référence du document (numéro de facture fournisseur) [Spec: API-only]"
+        - name: internal_document_id
+          value: INT-001
+          type: query
+          description: "Référence interne du document [Spec: API-only]"
+        - name: purchase_order_id
+          value: PO-2026-001
+          type: query
+          description: Référence du bon de commande (BT-13)
+        - name: status
+          value: "200"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "201"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "202"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "203"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "204"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "205"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "206"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "207"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "208"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "209"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "210"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "211"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "212"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "213"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "224"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: item_type
+          value: "261"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "262"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "380"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "381"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "384"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "386"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "389"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "393"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "396"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "471"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "472"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "473"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "500"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "501"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "502"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "503"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: sort
+          value: issueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: issueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: fields
+          value: invoiceId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: documentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: internalDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingContext
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: itemType
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: issueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: dueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: currency
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: status
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: operationCategory
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: purchaseOrderId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: businessUnitCode
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedIssueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingStartDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingEndDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: seller
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: sellerTaxRepresentative
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: singleTaxPayer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: deliveryInformation
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: lineItems
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: allowances
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: charges
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: total
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: vatBreakdown
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payment
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payments
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: notes
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyerCustomFields
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: createdAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: updatedAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: buyer_is_individual
+          value: "true"
+          type: query
+          description: "Nature de l’acheteur : true pour un particulier (B2C), false pour une société (B2B) [Spec: API-only]"
+        - name: buyer_first_name
+          value: Jean
+          type: query
+          description: "Prénom de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_last_name
+          value: Dupont
+          type: query
+          description: "Nom de famille de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_email
+          value: jean.dupont@example.com
+          type: query
+          description: "Email de l’acheteur [Spec: API-only]"
+        - name: buyer_internal_code
+          value: CUST-001
+          type: query
+          description: "Code interne de l’acheteur [Spec: API-only]"
+        - name: accounting_is_closed
+          value: "true"
+          type: query
+          description: "Filtre par statut de clôture comptable [Spec: API-only]"
+        - name: custom_fields
+          value: "[object Object]"
+          type: query
+          description: |-
+            Filtre par paires clé-valeur de champs personnalisés. Prend en charge uniquement les types SINGLE et MULTIPLE.
+
+             [Spec: API-only]Format : `custom_fields[key]=value` pour une valeur unique, `custom_fields[key]=val1&custom_fields[key]=val2` pour plusieurs valeurs.
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/invoices"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: invoice_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: "Identifiant de facture (UUID généré par la plateforme) [Spec: API-only]"
+        - name: invoicing_context
+          value: B2Bd
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2Bi
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2G
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: invoicing_context
+          value: B2C
+          type: query
+          description: "Filtre par contexte de facturation [Spec: API-only]"
+          disabled: true
+        - name: seller_id
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: query
+          description: Identifiant du vendeur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: buyer_id
+          value: "123456789"
+          type: query
+          description: Identifiant de l'acheteur (ID société, SIREN ou SIRET). Si l'ID société est fourni, inclut toutes les filiales.
+        - name: due_date
+          value: 2026-01-31
+          type: query
+          description: Filtre par date d'échéance
+        - name: issue_date
+          value: 2026-01-01
+          type: query
+          description: Filtre par date d'émission
+        - name: issue_date_from
+          value: 2026-01-01
+          type: query
+          description: Date de début de la plage d'émission (incluse)
+        - name: issue_date_to
+          value: 2026-12-31
+          type: query
+          description: Date de fin de la plage d'émission (incluse)
+        - name: document_id
+          value: INV-2026-001
+          type: query
+          description: "Référence du document (numéro de facture fournisseur) [Spec: API-only]"
+        - name: internal_document_id
+          value: INT-001
+          type: query
+          description: "Référence interne du document [Spec: API-only]"
+        - name: purchase_order_id
+          value: PO-2026-001
+          type: query
+          description: Référence du bon de commande (BT-13)
+        - name: status
+          value: "200"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "201"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "202"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "203"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "204"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "205"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "206"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "207"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "208"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "209"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "210"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "211"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "212"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "213"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "224"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "225"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "226"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "227"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: status
+          value: "228"
+          type: query
+          description: "Filtre par statut (codes de statut DGFIP) [Spec: API-only]"
+          disabled: true
+        - name: item_type
+          value: "261"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "262"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "380"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "381"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "384"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "386"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "389"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "393"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "396"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "471"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "472"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "473"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "500"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "501"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "502"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: item_type
+          value: "503"
+          type: query
+          description: |
+            Type de document (codes UNTDID 1001) :
+            - **380** => Facture commerciale
+            - **381** => Avoir
+            - **384** => Facture rectificative
+            - **386** => Facture d'acompte
+          disabled: true
+        - name: sort
+          value: issueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: issueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: dueDate-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: documentId-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: currency-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: status-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixé par '-asc' pour l'ordre croissant ou '-desc' pour l'ordre décroissant
+          disabled: true
+        - name: fields
+          value: invoiceId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: documentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: internalDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingContext
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: itemType
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: issueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: dueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: currency
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: status
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: operationCategory
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: purchaseOrderId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: businessUnitCode
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedDocumentId
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: correctedIssueDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingStartDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: invoicingEndDate
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: seller
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: sellerTaxRepresentative
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: singleTaxPayer
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: deliveryInformation
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: lineItems
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: allowances
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: charges
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: total
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: vatBreakdown
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payment
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: payments
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: notes
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: buyerCustomFields
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: createdAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: fields
+          value: updatedAt
+          type: query
+          description: "Champs à inclure dans la réponse (projection) [Spec: API-only]"
+          disabled: true
+        - name: buyer_is_individual
+          value: "true"
+          type: query
+          description: "Nature de l’acheteur : true pour un particulier (B2C), false pour une société (B2B) [Spec: API-only]"
+        - name: buyer_first_name
+          value: Jean
+          type: query
+          description: "Prénom de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_last_name
+          value: Dupont
+          type: query
+          description: "Nom de famille de l’acheteur (B2C) [Spec: API-only]"
+        - name: buyer_email
+          value: jean.dupont@example.com
+          type: query
+          description: "Email de l’acheteur [Spec: API-only]"
+        - name: buyer_internal_code
+          value: CUST-001
+          type: query
+          description: "Code interne de l’acheteur [Spec: API-only]"
+        - name: accounting_is_closed
+          value: "true"
+          type: query
+          description: "Filtre par statut de clôture comptable [Spec: API-only]"
+        - name: custom_fields
+          value: "[object Object]"
+          type: query
+          description: |-
+            Filtre par paires clé-valeur de champs personnalisés. Prend en charge uniquement les types SINGLE et MULTIPLE.
+
+             [Spec: API-only]Format : `custom_fields[key]=value` pour une valeur unique, `custom_fields[key]=val1&custom_fields[key]=val2` pour plusieurs valeurs.
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Récupérer une liste paginée de factures avec filtres optionnels.
+
+  **Pagination:**
+  - `offset`: Page (base 1, défaut: 1)
+  - `limit`: Nombre de résultats par page (défaut: 50, max: 200)
+
+  **Filtres disponibles:**
+  - `invoicing_context`: B2Bd, B2Bi, B2G, B2C
+  - `seller_id`, `buyer_id`: ID vendeur/acheteur
+  - `issue_date_from`, `issue_date_to`: Plage de dates d'émission
+  - `status`: Codes statut DGFIP
+  - `item_type`: Types de document (380, 384, 386)
+  - Et plus...
+
+  **Champs personnalisés:**
+  - `custom_fields`: Filtrer par valeurs de champs personnalisés (SINGLE et MULTIPLE uniquement)
+  - Exemple: `?custom_fields[internalKey]=value1&custom_fields[department]=sales`
+
+  **Tri:**
+  - `sort`: Tableau de champs (ex: issueDate-desc, dueDate-asc)
+
+  **Projection:**
+  - `fields`: Tableau de champs à inclure dans la réponse
+  - Exclure `payments` via projection pour alléger la réponse si non nécessaire

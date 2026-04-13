@@ -1,0 +1,21 @@
+meta {
+  name: Récupérer une liste de centres d’affaire
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/business-units
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  ~validator_email: 
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+}

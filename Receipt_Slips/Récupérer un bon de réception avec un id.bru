@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un bon de réception avec un id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v3/receipt-slips/:receiptSlipId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  receiptSlipId: 
+}

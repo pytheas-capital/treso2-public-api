@@ -1,0 +1,15 @@
+meta {
+  name: Supprimer un compte comptable
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v3/ledger-accounts/:ledgerAccountId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  ledgerAccountId: 
+}

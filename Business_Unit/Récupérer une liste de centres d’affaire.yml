@@ -1,0 +1,254 @@
+info:
+  name: Récupérer une liste de centres d’affaire
+  type: http
+  seq: 2
+  tags:
+    - Business_Unit
+
+http:
+  method: GET
+  url: "{{baseUrl}}/v3/business-units"
+  params:
+    - name: offset
+      value: "1"
+      type: query
+      description: Numéro de page souhaité
+    - name: limit
+      value: "25"
+      type: query
+      description: Nombre d'éléments à retourner par page (Maximum 100)
+    - name: validator_email
+      value: ""
+      type: query
+      description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
+      disabled: true
+    - name: sort
+      value: updatedAt-asc
+      type: query
+      description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+      disabled: true
+    - name: sort
+      value: updatedAt-desc
+      type: query
+      description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+      disabled: true
+    - name: sort
+      value: createdAt-asc
+      type: query
+      description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+      disabled: true
+    - name: sort
+      value: createdAt-desc
+      type: query
+      description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: La liste de centres d`affaire ou un tableau vide
+    request:
+      url: "{{baseUrl}}/v3/business-units"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: validator_email
+          value: ""
+          type: query
+          description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "createdAt": "",
+              "createdAtTS": 0,
+              "updatedAt": "",
+              "updatedAtTS": 0,
+              "companyId": "",
+              "subsidiaryRegistrationId": "",
+              "validatorEmail": "",
+              "internalCode": "",
+              "businessUnitId": "",
+              "businessUnitCode": "",
+              "parentBusinessUnitCode": "",
+              "companyName": ""
+            }
+          ]
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/business-units"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: validator_email
+          value: ""
+          type: query
+          description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/business-units"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: validator_email
+          value: ""
+          type: query
+          description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/business-units"
+      method: GET
+      params:
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: validator_email
+          value: ""
+          type: query
+          description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
+          disabled: true
+        - name: sort
+          value: updatedAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: updatedAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-asc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+        - name: sort
+          value: createdAt-desc
+          type: query
+          description: Tri par nom de champ, suffixer avec '-asc' pour ascendant et '-desc' pour descendant
+          disabled: true
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: Cette ressource permet de récupérer une liste de centres d’affaire ou un tableau vide.

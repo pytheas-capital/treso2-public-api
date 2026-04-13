@@ -1,0 +1,22 @@
+meta {
+  name: Récupérer une liste de clients ou un tableau vide
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/customers
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  ~createdAt: 
+  ~updatedAt: 
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Récupérer l'ensemble des sociétés rattachées à une société parente
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/companies/:companyId/subsidiaries
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+}
+
+params:path {
+  companyId: 
+}

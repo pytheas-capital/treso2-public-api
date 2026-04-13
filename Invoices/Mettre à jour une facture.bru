@@ -1,0 +1,144 @@
+meta {
+  name: Mettre à jour une facture
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/v3/invoices/:invoiceId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}
+
+body:json {
+  {
+    "documentId": "INV-20260315-12",
+    "profile": "urn:factur-x.eu:1p0:basic",
+    "itemType": "380",
+    "internalDocumentId": "INT-INV-001",
+    "issueDate": "2026-03-15",
+    "dueDate": "2026-04-14",
+    "currency": "EUR",
+    "taxCurrencyCode": "EUR",
+    "vatDueDateCode": "29",
+    "operationCategory": "B1",
+    "purchaseOrderId": "PO-2026-001",
+    "businessUnitCode": "BU-001",
+    "invoicingStartDate": "2026-03-01",
+    "invoicingEndDate": "2026-03-31",
+    "seller": "",
+    "buyer": "",
+    "lineItems": [
+      {
+        "number": 1,
+        "reference": "PROD-001",
+        "name": "Ordinateur portable Dell Latitude 5540 - 15",
+        "designation": "Processeur Intel Core i7, 16 Go RAM, SSD 512 Go",
+        "quantity": 5,
+        "unit": "C62",
+        "unitPriceHT": 850,
+        "totalAmountHT": 4250,
+        "discountAmount": 0,
+        "charge": 0,
+        "vatCodeType": "S",
+        "taxeRate": 20,
+        "invoicingStartDate": "2026-01-01",
+        "invoicingEndDate": "2026-01-31",
+        "lineBuyerOrderId": "PO-L1",
+        "linePrecedingInvoice": "",
+        "lineDespatchAdvice": "",
+        "lineReceiptAdvice": "",
+        "lineSellerOrder": "",
+        "lineDelivery": "",
+        "parentLineId": "LINE-001",
+        "lineSubType": "DETAIL",
+        "parentLineQuantity": 2,
+        "parentLineQuantityUnit": "EA",
+        "lineSeller": "",
+        "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
+        "lineVatExemptionCode": "VATEX-EU-O",
+        "lineVatDueDateCode": "3",
+        "lineNoteSubjectCode": "REG",
+        "articleAttributes": [
+          {
+            "code": "6313",
+            "value": "42",
+            "unit": "C62"
+          }
+        ],
+        "note": "Garantie constructeur 3 ans incluse"
+      }
+    ],
+    "total": "",
+    "vatBreakdown": [
+      {
+        "amountHT": 1000,
+        "vatCodeType": "S",
+        "vatRate": 20,
+        "vatAmount": 200,
+        "exemptionCode": "VATEX-EU-AE",
+        "exemptionReason": "Reverse charge - CGI Art. 283, 2 nonies"
+      }
+    ],
+    "allowances": [
+      {
+        "amount": 50,
+        "vatCodeType": "S",
+        "vatRate": 20,
+        "vatExemptionText": "Exonération de TVA sur remise documentaire",
+        "vatExemptionCode": "VATEX-EU-O"
+      }
+    ],
+    "charges": [
+      {
+        "amount": 25,
+        "vatCodeType": "S",
+        "vatRate": 20,
+        "vatExemptionText": "Exonération de TVA sur charge documentaire",
+        "vatExemptionCode": "VATEX-EU-O"
+      }
+    ],
+    "notes": [
+      {
+        "code": "PMT",
+        "text": "Indemnité forfaitaire de 40€ en cas de retard de paiement"
+      }
+    ],
+    "payment": "",
+    "deliveryInformation": "",
+    "buyerCustomFields": [
+      {
+        "key": "internalRef",
+        "value": "ABC123"
+      }
+    ],
+    "buyerReference": "EJ-2026-MAIRIE-00456",
+    "precedingInvoice": "",
+    "incoterms": "",
+    "contractRef": "CONTRACT-2026-001",
+    "projectRef": "PRJ-2026-CRM",
+    "tenderRef": "TO-2026-001",
+    "objectRef": "OBJ-2026-001",
+    "objectRefSchemeId": "APT",
+    "objectRefs": [
+      "OBJ-2026-001",
+      "OBJ-2026-002"
+    ],
+    "typeOfContract": "FRAMEWORK",
+    "payee": "",
+    "payer": "",
+    "thirdPartyInvoicer": "",
+    "buyerAgent": "",
+    "sellerAgent": "",
+    "invoicee": "",
+    "singleTaxPayer": "",
+    "sellerTaxRepresentative": "",
+    "sendEmail": false,
+    "recipientEmail": "client@example.com",
+    "status": 200
+  }
+}

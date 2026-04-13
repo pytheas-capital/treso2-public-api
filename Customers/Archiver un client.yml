@@ -1,0 +1,109 @@
+info:
+  name: Archiver un client
+  type: http
+  seq: 5
+  tags:
+    - Customers
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/v3/customers/:companyId"
+  params:
+    - name: companyId
+      value: ""
+      type: path
+      description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de clients ou un tableau vide".
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 204 Response
+    description: Le client a été archivé avec succès
+    request:
+      url: "{{baseUrl}}/v3/customers/:companyId"
+      method: DELETE
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de clients ou un tableau vide".
+    response:
+      status: 204
+      statusText: No Content
+      body:
+        type: text
+        data: ""
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/customers/:companyId"
+      method: DELETE
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de clients ou un tableau vide".
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/customers/:companyId"
+      method: DELETE
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de clients ou un tableau vide".
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 404 Response
+    description: Ressource non trouvée
+    request:
+      url: "{{baseUrl}}/v3/customers/:companyId"
+      method: DELETE
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de clients ou un tableau vide".
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/customers/:companyId"
+      method: DELETE
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de clients ou un tableau vide".
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Cette ressource permet d'archiver un client.
+
+  Si le client n'est pas trouvée, une erreur 404 sera retournée.

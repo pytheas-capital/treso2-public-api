@@ -1,0 +1,15 @@
+meta {
+  name: Archiver un fournisseur
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v3/suppliers/:companyId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  companyId: 
+}

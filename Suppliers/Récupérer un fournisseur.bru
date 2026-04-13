@@ -1,0 +1,20 @@
+meta {
+  name: Récupérer un fournisseur
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v3/suppliers/:companyId
+  body: none
+  auth: inherit
+}
+
+params:query {
+  customerRegistrationId: 123456789
+  customerSubsidiaryRegistrationId: 1234567890123
+}
+
+params:path {
+  companyId: 
+}

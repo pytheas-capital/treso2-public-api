@@ -1,0 +1,7 @@
+info:
+  name: Business_Unit
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

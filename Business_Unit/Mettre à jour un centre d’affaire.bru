@@ -1,0 +1,25 @@
+meta {
+  name: Mettre à jour un centre d’affaire
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/v3/business-units/:businessUnitId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  businessUnitId: 
+}
+
+body:json {
+  {
+    "validatorEmail": "",
+    "internalCode": "",
+    "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
+    "businessUnitCode": "",
+    "parentBusinessUnitCode": ""
+  }
+}

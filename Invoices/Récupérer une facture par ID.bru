@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer une facture par ID
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v3/invoices/:invoiceId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 123e4567-e89b-12d3-a456-426614174000
+}

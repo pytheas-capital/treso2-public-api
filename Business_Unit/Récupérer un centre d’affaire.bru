@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un centre d’affaire
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v3/business-units/:businessUnitId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  businessUnitId: 
+}

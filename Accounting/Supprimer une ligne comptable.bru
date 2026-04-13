@@ -1,0 +1,16 @@
+meta {
+  name: Supprimer une ligne comptable
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/v3/accounting/:id/ledger-entry/:accountNumber
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+  accountNumber: 
+}

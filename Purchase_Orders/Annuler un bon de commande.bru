@@ -1,0 +1,15 @@
+meta {
+  name: Annuler un bon de commande
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v3/purchase-orders/:purchaseOrderId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  purchaseOrderId: 
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Créer un axe analytique
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v3/analytical-axes
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "key": "DEPARTMENT",
+    "label": "Département",
+    "analyticalCodes": [
+      {
+        "code": "DEPT001",
+        "label": "Département des ventes",
+        "active": true
+      }
+    ],
+    "company": ""
+  }
+}

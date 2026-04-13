@@ -1,0 +1,15 @@
+meta {
+  name: Obtenir l'historique des paiements
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/payments
+  body: none
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}

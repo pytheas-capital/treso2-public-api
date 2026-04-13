@@ -1,0 +1,172 @@
+info:
+  name: Créer un code TVA
+  type: http
+  seq: 2
+  tags:
+    - Vat_Codes
+
+http:
+  method: POST
+  url: "{{baseUrl}}/v3/vat-codes"
+  body:
+    type: json
+    data: |-
+      {
+        "code": "VAT_20",
+        "label": "TVA 20%",
+        "percentage": 20,
+        "countryCode": "FR",
+        "vatCollectedAccount": "445710",
+        "vatDeductibleAccount": "445660",
+        "active": true,
+        "company": ""
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 201 Response
+    description: Le code TVA créé
+    request:
+      url: "{{baseUrl}}/v3/vat-codes"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "code": "VAT_20",
+            "label": "TVA 20%",
+            "percentage": 20,
+            "countryCode": "FR",
+            "vatCollectedAccount": "445710",
+            "vatDeductibleAccount": "445660",
+            "active": true,
+            "company": ""
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "createdAt": "",
+            "createdAtTS": 0,
+            "updatedAt": "",
+            "updatedAtTS": 0,
+            "vatCodeId": "",
+            "companyId": "",
+            "code": "",
+            "label": "",
+            "percentage": 0,
+            "countryCode": "",
+            "vatCollectedAccount": "",
+            "vatDeductibleAccount": "",
+            "active": false
+          }
+  - name: 400 Response
+    description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
+    request:
+      url: "{{baseUrl}}/v3/vat-codes"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "code": "VAT_20",
+            "label": "TVA 20%",
+            "percentage": 20,
+            "countryCode": "FR",
+            "vatCollectedAccount": "445710",
+            "vatDeductibleAccount": "445660",
+            "active": true,
+            "company": ""
+          }
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: text
+        data: ""
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/vat-codes"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "code": "VAT_20",
+            "label": "TVA 20%",
+            "percentage": 20,
+            "countryCode": "FR",
+            "vatCollectedAccount": "445710",
+            "vatDeductibleAccount": "445660",
+            "active": true,
+            "company": ""
+          }
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/vat-codes"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "code": "VAT_20",
+            "label": "TVA 20%",
+            "percentage": 20,
+            "countryCode": "FR",
+            "vatCollectedAccount": "445710",
+            "vatDeductibleAccount": "445660",
+            "active": true,
+            "company": ""
+          }
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/vat-codes"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "code": "VAT_20",
+            "label": "TVA 20%",
+            "percentage": 20,
+            "countryCode": "FR",
+            "vatCollectedAccount": "445710",
+            "vatDeductibleAccount": "445660",
+            "active": true,
+            "company": ""
+          }
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: Cette ressource permet de créer un code TVA pour une entreprise. L'entreprise est identifiée par l'objet company (companyRegistrationId et subsidiaryRegistrationId optionnel). L'entreprise doit être une société mère (avec clientSettings configuré).

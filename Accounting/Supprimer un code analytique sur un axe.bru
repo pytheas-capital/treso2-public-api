@@ -1,0 +1,18 @@
+meta {
+  name: Supprimer un code analytique sur un axe
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{baseUrl}}/v3/accounting/:id/ledger-entry/:accountNumber/axes/:axisKey/analytical-code/:code
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+  accountNumber: 
+  axisKey: 
+  code: 
+}

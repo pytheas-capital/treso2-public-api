@@ -1,0 +1,15 @@
+meta {
+  name: Supprimer un code tva
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v3/vat-codes/:vatCodeId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  vatCodeId: 
+}

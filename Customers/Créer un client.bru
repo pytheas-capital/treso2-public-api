@@ -1,0 +1,68 @@
+meta {
+  name: Créer un client
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v3/customers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
+    "vat": "FR42807708243",
+    "internalCode": "COMP01",
+    "type": "Publique",
+    "legalForm": "SARL",
+    "shareCapital": "2 500 000 euros",
+    "kyscTemplateId": "kyscTemplateId",
+    "address": "",
+    "fiscaleRepresentative": "",
+    "contacts": [
+      {
+        "firstName": "",
+        "lastName": "",
+        "email": "pierre.martin@societe.com",
+        "phone": "+33600000000",
+        "position": "Directeur financier",
+        "hasTreso2Access": false
+      }
+    ],
+    "bankInfos": "",
+    "startUsingDate": "2023-10-10",
+    "endUsingDate": "2025-10-10",
+    "routing": "",
+    "flags": "",
+    "ledgerAccountNumber": "401000",
+    "auxiliaryAccountNumber": "AUX123",
+    "name": "Pytheas Capital Advisors",
+    "registrationId": "807708243 ou 12345678A",
+    "supplierIdentifiers": [
+      {
+        "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
+        "vat": "FR42807708243",
+        "internalCode": "COMP01",
+        "registrationId": "807708243 ou 12345678A"
+      }
+    ],
+    "contact": "",
+    "addressingLines": [
+      {
+        "addressingIdentifier": "",
+        "schemeID": "",
+        "routingCode": "",
+        "engagementNumber": "",
+        "label": "",
+        "isDefault": false,
+        "status": "Actif",
+        "lastSyncDate": "",
+        "suffix": ""
+      }
+    ],
+    "invoicingLineStatus": "Actif",
+    "pdp": ""
+  }
+}

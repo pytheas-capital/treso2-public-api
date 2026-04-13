@@ -1,0 +1,77 @@
+meta {
+  name: Créer une facture
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v3/invoices
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+       "invoicingContext": "B2Bd",
+       "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+       "itemType": "380",
+       "documentId": "INV-TEST-001",
+       "issueDate": "2026-03-15",
+       "dueDate": "2026-04-14",
+       "currency": "EUR",
+       "operationCategory": "B1",
+       "seller": {
+         "companyRegistrationId": "807708243",
+         "companyRegistrationSchemeId": "0002",
+         "vat": "FR12807708243",
+         "subsidiaryRegistrationId": "80770824300066",
+         "subsidiaryRegistrationSchemeId": "0009",
+         "electronicAddress": "807708243_STATUTS",
+         "electronicAddressSchemeId": "0225",
+         "address": {
+           "addressLine1": "10 Rue Exemple",
+           "zipCode": "75001",
+           "city": "Paris",
+           "countryCode": "FR"
+         }
+       },
+       "buyer": {
+         "companyRegistrationId": "445950074",
+         "companyRegistrationSchemeId": "0002",
+         "subsidiaryRegistrationId": "44595007400085",
+         "subsidiaryRegistrationSchemeId": "0009",
+         "electronicAddress": "807708243",
+         "electronicAddressSchemeId": "0225",
+         "address": {
+           "addressLine1": "1 Place de l’Hôtel de Ville",
+           "zipCode": "75004",
+           "city": "Paris",
+           "countryCode": "FR"
+         }
+       },
+       "lineItems": [
+         {
+           "name": "Prestation de conseil",
+           "quantity": 1,
+           "unit": "HUR",
+           "unitPriceHT": 1200,
+           "totalAmountHT": 1200,
+           "vatCodeType": "S",
+           "taxeRate": 20
+         }
+       ],
+       "vatBreakdown": [
+         {
+           "vatCodeType": "S",
+           "vatRate": 20,
+           "amountHT": 1200,
+           "vatAmount": 240
+         }
+       ],
+       "total": {
+         "amountHT": 1200,
+         "amountVAT": 240,
+         "amountTTC": 1440
+       }
+     }
+}

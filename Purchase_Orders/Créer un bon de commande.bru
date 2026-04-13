@@ -1,0 +1,39 @@
+meta {
+  name: Créer un bon de commande
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v3/purchase-orders
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "documentId": "",
+    "status": "PENDING | FULLFILLED | CANCELED",
+    "issueDate": "",
+    "deliveryDate": "",
+    "totalAmount": 120,
+    "totalAmountTaxExcluded": 100,
+    "totalTaxAmount": 20,
+    "currency": "",
+    "note": "",
+    "lines": [
+      {
+        "reference": "REF001",
+        "quantity": 2,
+        "description": "Produit de test",
+        "unit": "KGM",
+        "unitPriceHT": 25.5,
+        "taxRate": 20
+      }
+    ],
+    "seller": "",
+    "buyer": "",
+    "sellerId": "",
+    "buyerId": ""
+  }
+}

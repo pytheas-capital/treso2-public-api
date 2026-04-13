@@ -1,0 +1,32 @@
+meta {
+  name: Mettre à jour un custom field
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{baseUrl}}/v3/custom-fields/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 
+}
+
+body:json {
+  {
+    "key": "internalKey",
+    "name": "Clé interne",
+    "type": "MULTIPLE",
+    "companyId": "companyId",
+    "description": "",
+    "required": false,
+    "values": [
+      {
+        "value": "",
+        "description": ""
+      }
+    ]
+  }
+}

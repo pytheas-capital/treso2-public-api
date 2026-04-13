@@ -1,0 +1,44 @@
+meta {
+  name: Obtenir une liste de bons de réception
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/receipt-slips
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  buyer_id: 123e4567
+  seller_id: 123e4567
+  purchase_order_id: 123e4567
+  ~status: FULLFILLED
+  ~status: PENDING
+  ~status: CANCELED
+  ~sort: status-asc
+  ~sort: status-desc
+  ~sort: seller-companyRegistrationId-asc
+  ~sort: seller-companyRegistrationId-desc
+  ~sort: buyer-companyRegistrationId-asc
+  ~sort: buyer-companyRegistrationId-desc
+  ~sort: receptionDate-asc
+  ~sort: receptionDate-desc
+  ~sort: totalAmount-asc
+  ~sort: totalAmount-desc
+  ~sort: totalAmountTaxExcluded-asc
+  ~sort: totalAmountTaxExcluded-desc
+  ~sort: totalAmountTax-asc
+  ~sort: totalAmountTax-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: documentId-asc
+  ~sort: documentId-desc
+  ~sort: purchaseOrderId-asc
+  ~sort: purchaseOrderId-desc
+}

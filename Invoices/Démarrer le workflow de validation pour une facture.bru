@@ -1,0 +1,27 @@
+meta {
+  name: Démarrer le workflow de validation pour une facture
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/start-validation
+  body: json
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}
+
+body:json {
+  {
+    "validators": [
+      {
+        "email": "validator@example.com",
+        "firstName": "John",
+        "lastName": "Doe"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Créer un approbateur métier
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v3/business-validators
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "validatorEmail": "",
+    "internalCode": "",
+    "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
+    "validatorFirstName": "",
+    "validatorLastName": "",
+    "nextValidatorEmail": "",
+    "rank": "",
+    "parentBusinessUnitCode": ""
+  }
+}

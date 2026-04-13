@@ -1,0 +1,43 @@
+meta {
+  name: Obtenir une liste de bons de commande
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v3/purchase-orders
+  body: none
+  auth: inherit
+}
+
+params:query {
+  offset: 1
+  limit: 25
+  buyer_id: 123e4567
+  seller_id: 123e4567
+  ~status: PENDING
+  ~status: FULLFILLED
+  ~status: CANCELED
+  ~sort: status-asc
+  ~sort: status-desc
+  ~sort: seller-companyRegistrationId-asc
+  ~sort: seller-companyRegistrationId-desc
+  ~sort: buyer-companyRegistrationId-asc
+  ~sort: buyer-companyRegistrationId-desc
+  ~sort: deliveryDate-asc
+  ~sort: deliveryDate-desc
+  ~sort: totalAmount-asc
+  ~sort: totalAmount-desc
+  ~sort: createdAt-asc
+  ~sort: createdAt-desc
+  ~sort: updatedAt-asc
+  ~sort: updatedAt-desc
+  ~sort: documentId-asc
+  ~sort: documentId-desc
+  ~sort: issueDate-asc
+  ~sort: issueDate-desc
+  ~sort: totalAmountTaxExcluded-asc
+  ~sort: totalAmountTaxExcluded-desc
+  ~sort: totalTaxAmount-asc
+  ~sort: totalTaxAmount-desc
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Créer un centre d’affaire
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v3/business-units
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "validatorEmail": "",
+    "internalCode": "",
+    "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
+    "businessUnitCode": "",
+    "parentBusinessUnitCode": ""
+  }
+}

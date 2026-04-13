@@ -1,0 +1,24 @@
+meta {
+  name: Modifier un code analytique
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{baseUrl}}/v3/analytical-axes/:analyticalAxisId/analytical-codes/:code
+  body: json
+  auth: inherit
+}
+
+params:path {
+  analyticalAxisId: 
+  code: 
+}
+
+body:json {
+  {
+    "code": "DEPT001",
+    "label": "Département des ventes",
+    "active": true
+  }
+}

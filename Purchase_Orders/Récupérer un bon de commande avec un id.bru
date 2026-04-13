@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un bon de commande avec un id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v3/purchase-orders/:purchaseOrderId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  purchaseOrderId: 
+}

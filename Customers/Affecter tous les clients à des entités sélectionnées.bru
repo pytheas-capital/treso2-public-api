@@ -1,0 +1,22 @@
+meta {
+  name: Affecter tous les clients à des entités sélectionnées
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v3/customers/assign-all
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "supplierIdentifiers": [
+      {
+        "registrationId": "12345678901234",
+        "subsidiaryRegistrationId": "12345678901234"
+      }
+    ]
+  }
+}

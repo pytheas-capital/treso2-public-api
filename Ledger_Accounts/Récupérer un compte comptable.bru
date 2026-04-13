@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un compte comptable
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v3/ledger-accounts/:ledgerAccountId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  ledgerAccountId: 
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Archiver un approbateur métier
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v3/business-validators/:businessValidatorId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  businessValidatorId: 
+}

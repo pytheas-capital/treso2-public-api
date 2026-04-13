@@ -1,0 +1,16 @@
+meta {
+  name: Supprimer un code analytique
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/v3/analytical-axes/:analyticalAxisId/analytical-codes/:code
+  body: none
+  auth: inherit
+}
+
+params:path {
+  analyticalAxisId: 
+  code: 
+}

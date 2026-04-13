@@ -1,0 +1,218 @@
+info:
+  name: Récupérer l'ensemble des sociétés rattachées à une société parente
+  type: http
+  seq: 2
+  tags:
+    - Entity_management
+
+http:
+  method: GET
+  url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
+  params:
+    - name: companyId
+      value: ""
+      type: path
+      description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
+    - name: offset
+      value: "1"
+      type: query
+      description: Numéro de page souhaité
+    - name: limit
+      value: "25"
+      type: query
+      description: Nombre d'éléments à retourner par page (Maximum 100)
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: La liste des filiales de l'entreprise avec métadonnées de pagination
+    request:
+      url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
+      method: GET
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "companies": [
+              []
+            ],
+            "totalCount": 2,
+            "page": 1,
+            "limit": 25,
+            "totalPages": 1
+          }
+  - name: 401 Response
+    description: L'utilisateur n'est pas authentifié
+    request:
+      url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
+      method: GET
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+    response:
+      status: 401
+      statusText: Unauthorized
+      body:
+        type: text
+        data: ""
+  - name: 403 Response
+    description: L'utilisateur n'est pas autorisé à effectuer l'action
+    request:
+      url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
+      method: GET
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+    response:
+      status: 403
+      statusText: Forbidden
+      body:
+        type: text
+        data: ""
+  - name: 404 Response
+    description: Entreprise parente non trouvée
+    request:
+      url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
+      method: GET
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: text
+        data: ""
+  - name: 500 Response
+    description: Une erreur de serveur inattendue s'est produite
+    request:
+      url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
+      method: GET
+      params:
+        - name: companyId
+          value: ""
+          type: path
+          description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
+        - name: offset
+          value: "1"
+          type: query
+          description: Numéro de page souhaité
+        - name: limit
+          value: "25"
+          type: query
+          description: Nombre d'éléments à retourner par page (Maximum 100)
+    response:
+      status: 500
+      statusText: Internal Server Error
+      body:
+        type: text
+        data: ""
+
+docs: "Cette ressource permet de récupérer la liste des filiales d'une entreprise parente via son identifiant.
+
+  \    </br>
+
+  \    Pour chaque filiale, les informations suivantes sont retournées :
+
+  \    <ul>
+
+  \      <li><b>companyId</b> : Identifiant technique de la société</li>
+
+  \      <li><b>siren</b> : SIREN de la société</li>
+
+  \      <li><b>siret</b> : SIRET de la société</li>
+
+  \      <li><b>vatNumber</b> : Numéro de TVA de la société</li>
+
+  \      <li><b>companyName</b> : Nom de la société</li>
+
+  \      <li><b>street</b> : Adresse de la société</li>
+
+  \      <li><b>zipCode</b> : Code postal de la société</li>
+
+  \      <li><b>city</b> : Ville de la société</li>
+
+  \      <li><b>country</b> : Pays de la société</li>
+
+  \      <li><b>createdAt</b> : Date de création</li>
+
+  \      <li><b>updatedAt</b> : Date de dernière modification</li>
+
+  \    </ul>
+
+  \    </br>
+
+  \    L'utilisateur doit avoir les permissions de lecture sur l'entreprise parente.
+
+  \    </br>
+
+  \    Les filiales sont paginées avec un maximum de 25 éléments par page par défaut.
+
+  \    </br>
+
+  \    Si aucune filiale n'est trouvée, un tableau vide sera retourné.
+
+  \    </br>
+
+  \    Si l'entreprise parente n'est pas trouvée, une erreur 404 sera retournée.
+
+  \    </br>
+
+  \    Si l'utilisateur n'a pas les permissions, une erreur 403 sera retournée.
+
+  \    "

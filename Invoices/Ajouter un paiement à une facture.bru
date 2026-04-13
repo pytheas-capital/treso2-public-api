@@ -1,0 +1,24 @@
+meta {
+  name: Ajouter un paiement à une facture
+  type: http
+  seq: 12
+}
+
+patch {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/payments
+  body: json
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}
+
+body:json {
+  {
+    "amount": 1000,
+    "date": "2026-01-27",
+    "reference": "PAY-2026-001",
+    "notes": "Partial payment received via bank transfer"
+  }
+}

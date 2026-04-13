@@ -1,0 +1,43 @@
+meta {
+  name: Mettre à jour un bon de réception
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v3/receipt-slips/:receiptSlipId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  receiptSlipId: 
+}
+
+body:json {
+  {
+    "documentId": "BR-2024-001",
+    "purchaseOrderId": "PO-2024-001",
+    "status": "RECEIVED",
+    "receptionDate": "2024-01-15T10:00:00Z",
+    "totalAmount": 120,
+    "totalAmountTaxExcluded": 100,
+    "totalAmountTax": 20,
+    "currency": "EUR",
+    "note": "Livraison conforme",
+    "lines": [
+      {
+        "reference": "REF001",
+        "quantity": 2,
+        "description": "Produit de test",
+        "unit": "KGM",
+        "unitPriceHT": 25.5,
+        "taxRate": 20
+      }
+    ],
+    "seller": "",
+    "buyer": "",
+    "sellerId": "",
+    "buyerId": ""
+  }
+}
