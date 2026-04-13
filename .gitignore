@@ -1,2 +1,19 @@
 .pi
 .DS_Store
+
+# Environment and local secret files
+.env
+.env.*
+*.env
+*.local
+*.secret
+*.secrets
+*.credentials
+*.key
+*.pem
+
+# Bruno local environments
+environments/*.bru
+!environments/Treso2 Public API v3 Clients Testing.bru
+/SECURITY_SETUP.md
+/scripts/pre-commit-secret-scan.sh

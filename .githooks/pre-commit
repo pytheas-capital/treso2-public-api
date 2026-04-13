@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -eu
+
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+SCAN_SCRIPT="$REPO_ROOT/scripts/pre-commit-secret-scan.sh"
+
+if [ ! -x "$SCAN_SCRIPT" ]; then
+  echo "pre-commit: missing executable scan script: $SCAN_SCRIPT" >&2
+  echo "Run: chmod +x scripts/pre-commit-secret-scan.sh .githooks/pre-commit" >&2
+  exit 1
+fi
+
+exec "$SCAN_SCRIPT"
