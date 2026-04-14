@@ -1,0 +1,22 @@
+meta {
+  name: Soumettre un événement de cycle de vie de facture
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/lifecycle-events
+  body: json
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}
+
+body:json {
+  {
+    "processConditionCode": "205",
+    "comment": "Approved by buyer"
+  }
+}

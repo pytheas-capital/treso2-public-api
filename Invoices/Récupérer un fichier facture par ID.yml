@@ -1,7 +1,7 @@
 info:
   name: Récupérer un fichier facture par ID
   type: http
-  seq: 3
+  seq: 5
   tags:
     - Invoices
 
@@ -10,10 +10,11 @@ http:
   url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
   params:
     - name: format
-      value: facturx
+      value: ubl
       type: path
+      description: Format du fichier généré à récupérer
     - name: invoiceId
-      value: 019d506c-43cc-70a6-bceb-ffae6d1b7cc1
+      value: 019d8b22-1fe5-76ea-97b3-9a2899a90a33
       type: path
       description: Identifiant unique de la facture (UUID)
   auth: inherit
@@ -26,11 +27,14 @@ settings:
 
 examples:
   - name: 200 Response
-    description: La facture demandée
+    description: Le fichier généré est prêt et streamé via l’API publique
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
       method: GET
       params:
+        - name: format
+          value: facturx
+          type: path
         - name: invoiceId
           value: 123e4567-e89b-12d3-a456-426614174000
           type: path
@@ -40,159 +44,57 @@ examples:
       statusText: OK
       headers:
         - name: Content-Type
-          value: application/json
+          value: application/pdf
       body:
-        type: json
-        data: |-
-          {
-            "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
-            "documentId": "INV-2026-001",
-            "internalDocumentId": "INT-001",
-            "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
-            "itemType": "380",
-            "issueDate": "2026-01-15",
-            "dueDate": "2026-02-15",
-            "currency": "EUR",
-            "status": 225,
-            "vatDueDateCode": "3",
-            "operationCategory": "B1",
-            "purchaseOrderId": "PO-2026-001",
-            "contractRef": "CONTRACT-2026-001",
-            "buyerReference": "EJ-2026-MAIRIE-00456",
-            "typeOfContract": "FRAMEWORK",
-            "precedingInvoice": "",
-            "incoterms": "",
-            "businessUnitCode": "BU-001",
-            "taxCurrencyCode": "EUR",
-            "projectRef": "PRJ-2026-CRM",
-            "tenderRef": "TO-2026-001",
-            "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
-            "objectRefs": [
-              "OBJ-2026-001",
-              "OBJ-2026-002"
-            ],
-            "invoicingStartDate": "2026-01-01",
-            "invoicingEndDate": "2026-01-31",
-            "seller": "",
-            "buyer": "",
-            "payee": "",
-            "payer": "",
-            "thirdPartyInvoicer": "",
-            "buyerAgent": "",
-            "sellerAgent": "",
-            "invoicee": "",
-            "sellerTaxRepresentative": "",
-            "singleTaxPayer": "",
-            "deliveryInformation": "",
-            "notes": [
-              {
-                "code": "AAA",
-                "text": "Note text content"
-              }
-            ],
-            "lineItems": [
-              {
-                "number": 1,
-                "reference": "PROD-001",
-                "name": "Product Name",
-                "designation": "Product Description",
-                "unitPriceHT": 100,
-                "quantity": 2,
-                "unit": "C62",
-                "discountAmount": 10,
-                "charge": 5,
-                "totalAmountHT": 195,
-                "vatCodeType": "S",
-                "taxeRate": 20,
-                "invoicingStartDate": "2026-01-01",
-                "invoicingEndDate": "2026-01-31",
-                "lineBuyerOrderId": "PO-L1",
-                "linePrecedingInvoice": "",
-                "lineDespatchAdvice": "",
-                "lineReceiptAdvice": "",
-                "lineSellerOrder": "",
-                "lineDelivery": "",
-                "parentLineId": "LINE-001",
-                "lineSubType": "DETAIL",
-                "parentLineQuantity": 2,
-                "parentLineQuantityUnit": "EA",
-                "lineSeller": "",
-                "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
-                "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
-                "lineNoteSubjectCode": "REG",
-                "articleAttributes": [
-                  {
-                    "code": "6313",
-                    "value": "42",
-                    "unit": "C62"
-                  }
-                ],
-                "note": "Line item note"
-              }
-            ],
-            "allowances": [
-              {
-                "amount": 50,
-                "vatCodeType": "S",
-                "vatRate": 20,
-                "vatExemptionText": "Exonération de TVA sur remise documentaire",
-                "vatExemptionCode": "VATEX-EU-O"
-              }
-            ],
-            "charges": [
-              {
-                "amount": 25,
-                "vatCodeType": "S",
-                "vatRate": 20,
-                "vatExemptionText": "Exonération de TVA sur charge documentaire",
-                "vatExemptionCode": "VATEX-EU-O"
-              }
-            ],
-            "total": "",
-            "vatBreakdown": [
-              {
-                "amountHT": 500,
-                "vatCodeType": "S",
-                "vatRate": 20,
-                "vatAmount": 100,
-                "exemptionCode": "VATEX-EU-AE",
-                "exemptionReason": "Exemption reason text"
-              }
-            ],
-            "payment": "",
-            "payments": [
-              {
-                "id": "0199f8b0-1c2d-4f3e-b2d0-123456789abc",
-                "amount": 500,
-                "date": "2026-02-01",
-                "method": "bank_transfer",
-                "reference": "PAY-2026-001",
-                "notes": "Partial payment via bank transfer",
-                "createdAt": "2026-02-01T10:30:00.000Z",
-                "createdBy": "user@example.com"
-              }
-            ],
-            "buyerCustomFields": [
-              {
-                "key": "custom_field_1",
-                "value": [
-                  "value1",
-                  "value2"
-                ]
-              }
-            ],
-            "createdAt": "2026-01-15T10:30:00.000Z",
-            "updatedAt": "2026-01-15T14:45:00.000Z"
-          }
+        type: text
+        data: "%PDF-1.7 … fichier binaire streamé par l'API …"
+  - name: 202 Response
+    description: Le fichier est encore en cours de génération
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
+      method: GET
+      params:
+        - name: format
+          value: facturx
+          type: path
+        - name: invoiceId
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: path
+          description: Identifiant unique de la facture (UUID)
+    response:
+      status: 202
+      statusText: Accepted
+      body:
+        type: text
+        data: ""
+  - name: 400 Response
+    description: Format de fichier non pris en charge
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
+      method: GET
+      params:
+        - name: format
+          value: xml
+          type: path
+        - name: invoiceId
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: path
+          description: Identifiant unique de la facture (UUID)
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: text
+        data: ""
   - name: 401 Response
     description: L'utilisateur n'est pas authentifié
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
       method: GET
       params:
+        - name: format
+          value: facturx
+          type: path
         - name: invoiceId
           value: 123e4567-e89b-12d3-a456-426614174000
           type: path
@@ -206,9 +108,12 @@ examples:
   - name: 403 Response
     description: L'utilisateur n'est pas autorisé à effectuer l'action
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
       method: GET
       params:
+        - name: format
+          value: facturx
+          type: path
         - name: invoiceId
           value: 123e4567-e89b-12d3-a456-426614174000
           type: path
@@ -220,11 +125,14 @@ examples:
         type: text
         data: ""
   - name: 404 Response
-    description: Facture non trouvée
+    description: Facture introuvable
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
       method: GET
       params:
+        - name: format
+          value: facturx
+          type: path
         - name: invoiceId
           value: 123e4567-e89b-12d3-a456-426614174000
           type: path
@@ -235,12 +143,34 @@ examples:
       body:
         type: text
         data: ""
+  - name: 422 Response
+    description: La génération a échoué de façon terminale
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
+      method: GET
+      params:
+        - name: format
+          value: facturx
+          type: path
+        - name: invoiceId
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: path
+          description: Identifiant unique de la facture (UUID)
+    response:
+      status: 422
+      statusText: Unprocessable Entity
+      body:
+        type: text
+        data: ""
   - name: 500 Response
     description: Une erreur de serveur inattendue s'est produite
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
       method: GET
       params:
+        - name: format
+          value: facturx
+          type: path
         - name: invoiceId
           value: 123e4567-e89b-12d3-a456-426614174000
           type: path
@@ -251,10 +181,36 @@ examples:
       body:
         type: text
         data: ""
+  - name: 503 Response
+    description: Le fichier est marqué prêt mais le stockage est indisponible
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/files/:format"
+      method: GET
+      params:
+        - name: format
+          value: facturx
+          type: path
+        - name: invoiceId
+          value: 123e4567-e89b-12d3-a456-426614174000
+          type: path
+          description: Identifiant unique de la facture (UUID)
+    response:
+      status: 503
+      statusText: Service Unavailable
+      body:
+        type: text
+        data: ""
 
 docs: |-
-  Récupérer les détails complets d'une facture via son identifiant.
+  Récupérer un fichier généré pour une facture via l’API publique.
 
-  La réponse conserve les rôles de parties documentés par le contrat public v3; les blocs métier visibles ne doivent pas être interprétés comme des alias dédupliqués.
+  **Formats pris en charge:**
+  - `ubl`
+  - `cii`
+  - `facturx`
 
-  Si la facture n'est pas trouvée, une erreur 404 sera retournée.
+  **Comportement:**
+  - `200` si le fichier est prêt et streamé directement par l’API
+  - `202` si la génération est encore en cours
+  - `422` si la génération a échoué de façon terminale
+  - `503` si le stockage est indisponible malgré un fichier marqué prêt

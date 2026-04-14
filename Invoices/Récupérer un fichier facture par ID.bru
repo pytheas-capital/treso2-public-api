@@ -1,0 +1,15 @@
+meta {
+  name: Récupérer un fichier facture par ID
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/files/:format
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+  format: facturx
+}

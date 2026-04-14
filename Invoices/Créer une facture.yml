@@ -1,7 +1,7 @@
 info:
   name: Créer une facture
   type: http
-  seq: 2
+  seq: 3
   tags:
     - Invoices
 
@@ -12,15 +12,22 @@ http:
     type: json
     data: |-
       {
-           "invoicingContext": "B2Bd",
-           "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
-           "itemType": "380",
-           "documentId": "INV-TEST-023",
-           "issueDate": "2026-03-15",
-           "dueDate": "2026-04-14",
-           "currency": "EUR",
-           "operationCategory": "B1",
-           "seller": {
+        "invoicingContext": "B2Bd",
+        "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+        "itemType": "380",
+        "documentId": "INV-2026-001",
+        "internalDocumentId": "INT-INV-2026-001",
+        "issueDate": "2026-03-15",
+        "dueDate": "2026-04-14",
+        "currency": "EUR",
+        "taxCurrencyCode": "EUR",
+        "vatDueDateCode": "INVOICE_ISSUE_DATE",
+        "operationCategory": "B1",
+        "purchaseOrderId": "PO-2026-001",
+        "businessUnitCode": "BU-001",
+        "invoicingStartDate": "2026-03-01",
+        "invoicingEndDate": "2026-03-31",
+        "seller": {
              "name":"MySeller",
              "companyRegistrationId": "807708243",
              "companyRegistrationSchemeId": "0002",
@@ -51,31 +58,261 @@ http:
                "countryCode": "FR"
              }
            },
-           "lineItems": [
-             {
-               "name": "Prestation de conseil",
-               "quantity": 1,
-               "unit": "HUR",
-               "unitPriceHT": 1200,
-               "totalAmountHT": 1200,
-               "vatCodeType": "S",
-               "taxeRate": 20
-             }
-           ],
-           "vatBreakdown": [
-             {
-               "vatCodeType": "S",
-               "vatRate": 20,
-               "amountHT": 1200,
-               "vatAmount": 240
-             }
-           ],
-           "total": {
-             "amountHT": 1200,
-             "amountVAT": 240,
-             "amountTTC": 1440
-           }
-         }
+        "lineItems": [
+          {
+            "reference": "CONSULT-001",
+            "name": "Prestation de conseil",
+            "designation": "Mission de conseil stratégique",
+            "quantity": 1,
+            "unit": "HUR",
+            "unitPriceHT": 1200,
+            "discountAmount": 0,
+            "charge": 0,
+            "totalAmountHT": 1200,
+            "vatCodeType": "S",
+            "taxeRate": 20,
+            "invoicingStartDate": "2026-03-01",
+            "invoicingEndDate": "2026-03-31",
+            "lineBuyerOrderId": "PO-L1",
+            "linePrecedingInvoice": {
+              "id": "INV-2025-123",
+              "typeCode": "380"
+            },
+            "lineDespatchAdvice": {
+              "id": "DESP-2026-001",
+              "lineId": "1"
+            },
+            "lineReceiptAdvice": {
+              "id": "RCT-2026-001",
+              "lineId": "1"
+            },
+            "lineSellerOrder": {
+              "id": "SO-2026-001",
+              "lineId": "1"
+            },
+            "lineDelivery": {
+              "locationId": "LOC-001",
+              "locationIdScheme": "SIRET",
+              "name": "Entrepôt principal",
+              "address": {
+                "line1": "12 Rue de la Paix",
+                "city": "Paris",
+                "postCode": "75001",
+                "countryCode": "FR"
+              },
+              "date": "2026-03-20"
+            },
+            "parentLineId": "LINE-ROOT-01",
+            "lineSubType": "DETAIL",
+            "parentLineQuantity": 2,
+            "parentLineQuantityUnit": "C62",
+            "lineSeller": {
+              "name": "Vendor A",
+              "tradingName": "Vendor A Store",
+              "globalId": "0088:1234567890123",
+              "legalId": "807708243",
+              "vatId": "FR12807708243",
+              "countryCode": "FR"
+            },
+            "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
+            "lineNoteSubjectCode": "REG",
+            "articleAttributes": [
+              {
+                "code": "6313",
+                "value": "42",
+                "unit": "C62"
+              }
+            ],
+            "note": "Livraison partielle autorisée"
+          }
+        ],
+        "total": {
+          "amountHT": 1175,
+          "amountVAT": 235,
+          "amountTTC": 1410,
+          "vatAmountCurrency": 235,
+          "allowanceTotalAmount": 50,
+          "chargeTotalAmount": 25,
+          "dueAmount": 1410,
+          "payableRoundingAmount": 0
+        },
+        "allowances": [
+          {
+            "amount": 50,
+            "vatCodeType": "S",
+            "vatRate": 20,
+            "reason":"text"
+          }
+        ],
+        "charges": [
+          {
+            "amount": 25,
+            "vatCodeType": "S",
+            "vatRate": 20,
+            "reason":"text"
+          }
+        ],
+        "vatBreakdown": [
+          {
+            "amountHT": 1175,
+            "vatCodeType": "S",
+            "vatRate": 20,
+            "vatAmount": 235
+          }
+        ],
+        "notes": [
+          {
+            "code": "PMT",
+            "text": "Pénalités de retard: taux légal majoré."
+          },
+          {
+            "code": "PMD",
+            "text": "Mon texte PMD"
+          },
+          {
+            "code": "AAB",
+            "text": "Mon texte AAB"
+          }
+        ],
+        "payment": {
+          "method": "30",
+          "terms": "Paiement à 30 jours fin de mois",
+          "transfer": {
+            "iban": "FR7630006000011234567890189",
+            "accountName": "Pytheas Capital Advisors",
+            "bicSwift": "AGRIFRPP"
+          },
+          "directDebit": {
+            "sci": "FR12ZZZ123456",
+            "iban": "FR7612345678901234567890123",
+            "mandate": "MANDATE-001"
+          },
+          "reference": "PAY-REF-001",
+          "date": "2026-04-14"
+        },
+        "deliveryInformation": {
+          "name": "Central Warehouse",
+          "establishment": "WAREHOUSE-01",
+          "date": "2026-03-20",
+          "to": {
+            "addressLine1": "12 Rue de la Paix",
+            "zipCode": "75001",
+            "city": "Paris",
+            "countryCode": "FR"
+          }
+        },
+        "buyerCustomFields": [
+          {
+            "key": "cost_center",
+            "value": "CC-001"
+          }
+        ],
+        "buyerReference": "BR-2026-001",
+        "incoterms": {
+          "code": "FOB",
+          "location": "Le Havre"
+        },
+        "contractRef": "CONTRACT-2026-001",
+        "projectRef": "PRJ-2026-CRM",
+        "tenderRef": "TO-2026-001",
+        "objectRef": "OBJ-2026-001",
+        "objectRefSchemeId": "AAK",
+        "objectRefs": [
+          "OBJ-2026-001",
+          "OBJ-2026-002"
+        ],
+        "typeOfContract": "FRAMEWORK",
+        "payee": {
+          "name": "Financing Beneficiary SAS",
+          "companyRegistrationId": "489387050",
+          "companyRegistrationSchemeId": "0002",
+          "vat": "FR52741852963",
+          "electronicAddress": "mailto:payee@example.com",
+          "address": {
+            "addressLine1": "3 Rue du Bénéficiaire",
+            "zipCode": "75002",
+            "city": "Paris",
+            "countryCode": "FR"
+          },
+          "bankAccount": {
+            "iban": "FR7612345678901234567890123",
+            "bic": "AGRIFRPP"
+          },
+          "mandateReference": "PAYEE-MANDATE-001"
+        },
+        "payer": {
+          "name": "Pytheas Payment Center",
+          "companyRegistrationId": "123456789",
+          "companyRegistrationSchemeId": "0002",
+          "vat": "FR12123456789",
+          "electronicAddress": "mailto:payments@example.com",
+          "address": {
+            "addressLine1": "20 Rue du Paiement",
+            "city": "Paris",
+            "countryCode": "FR"
+          }
+        },
+        "thirdPartyInvoicer": {
+          "name": "Shared Service Center",
+          "companyRegistrationId": "987654321",
+          "companyRegistrationSchemeId": "0002",
+          "vat": "FR12987654321",
+          "electronicAddress": "mailto:billing@example.com",
+          "address": {
+            "addressLine1": "8 Rue de la Facturation",
+            "city": "Lille",
+            "countryCode": "FR"
+          }
+        },
+        "buyerAgent": {
+          "name": "Procurement Agent",
+          "companyRegistrationId": "456789123",
+          "companyRegistrationSchemeId": "0002",
+          "electronicAddress": "mailto:buyer-agent@example.com",
+          "address": {
+            "addressLine1": "4 Rue des Achats",
+            "city": "Paris",
+            "countryCode": "FR"
+          }
+        },
+        "sellerAgent": {
+          "name": "Sales Agent",
+          "companyRegistrationId": "321654987",
+          "companyRegistrationSchemeId": "0002",
+          "vat": "FR12321654987",
+          "electronicAddress": "mailto:seller-agent@example.com",
+          "address": {
+            "addressLine1": "18 Rue du Commerce",
+            "city": "Lyon",
+            "countryCode": "FR"
+          }
+        },
+        "invoicee": {
+          "name": "Acme Shared Services",
+          "companyRegistrationId": "654987321",
+          "companyRegistrationSchemeId": "0002",
+          "electronicAddress": "mailto:invoicee@example.com",
+          "address": {
+            "addressLine1": "15 Rue de la Comptabilité",
+            "zipCode": "75002",
+            "city": "Paris",
+            "countryCode": "FR"
+          }
+        },
+        "singleTaxPayer": {
+          "companyRegistrationId": "807708243",
+          "vat": "FR42807708243"
+        },
+        "sellerTaxRepresentative": {
+          "name": "Fiscal Representative SARL",
+          "vat": "FR66777888999",
+          "address": {
+            "addressLine1": "2 Rue Fiscale",
+            "city": "Paris",
+            "countryCode": "FR"
+          }
+        }
+      }
   auth: inherit
 
 settings:

@@ -1,0 +1,14 @@
+meta {
+  name: Publier un brouillon de facture
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/v3/invoices/:invoiceId/publish
+  auth: inherit
+}
+
+params:path {
+  invoiceId: 
+}

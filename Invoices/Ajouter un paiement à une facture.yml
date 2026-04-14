@@ -1,7 +1,7 @@
 info:
   name: Ajouter un paiement à une facture
   type: http
-  seq: 13
+  seq: 15
   tags:
     - Invoices
 

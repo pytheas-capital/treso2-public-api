@@ -1,7 +1,7 @@
 info:
   name: Supprimer le workflow de validation pour une facture
   type: http
-  seq: 12
+  seq: 14
   tags:
     - Invoices
 

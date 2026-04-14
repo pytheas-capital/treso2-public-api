@@ -1,7 +1,7 @@
 info:
   name: Rattacher le lisible PDF à une facture
   type: http
-  seq: 10
+  seq: 12
   tags:
     - Invoices
 

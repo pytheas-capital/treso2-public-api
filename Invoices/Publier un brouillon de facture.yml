@@ -1,13 +1,13 @@
 info:
-  name: Supprimer une facture
+  name: Publier un brouillon de facture
   type: http
-  seq: 10
+  seq: 7
   tags:
     - Invoices
 
 http:
-  method: DELETE
-  url: "{{baseUrl}}/v3/invoices/:invoiceId"
+  method: POST
+  url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
   params:
     - name: invoiceId
       value: ""
@@ -23,13 +23,13 @@ settings:
 
 examples:
   - name: 204 Response
-    description: La facture a été supprimée avec succès
+    description: Le brouillon de facture a été publié avec succès
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
-      method: DELETE
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
+      method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
@@ -39,13 +39,13 @@ examples:
         type: text
         data: ""
   - name: 400 Response
-    description: La facture ne peut pas être supprimée
+    description: La facture ne peut pas être publiée
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
-      method: DELETE
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
+      method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
@@ -57,11 +57,11 @@ examples:
   - name: 401 Response
     description: L'utilisateur n'est pas authentifié
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
-      method: DELETE
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
+      method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
@@ -73,11 +73,11 @@ examples:
   - name: 403 Response
     description: L'utilisateur n'est pas autorisé à effectuer l'action
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
-      method: DELETE
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
+      method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
@@ -89,11 +89,11 @@ examples:
   - name: 404 Response
     description: Facture non trouvée
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
-      method: DELETE
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
+      method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
@@ -105,11 +105,11 @@ examples:
   - name: 500 Response
     description: Une erreur de serveur inattendue s'est produite
     request:
-      url: "{{baseUrl}}/v3/invoices/:invoiceId"
-      method: DELETE
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
+      method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
@@ -120,13 +120,9 @@ examples:
         data: ""
 
 docs: |-
-  Supprimer une facture existante.
+  Publier un brouillon de facture pour le faire passer vers son cycle de vie final.
 
   **Comportement:**
-  - Suppression logique (soft delete) - la facture est marquée comme supprimée
-  - La facture n'apparaîtra plus dans les listes
-  - Les données sont conservées pour audit
-
-  **Restrictions:**
-  - Seules les factures en statut brouillon (0) peuvent être supprimées
-  - Les factures transmises ne peuvent pas être supprimées
+  - réservé aux factures encore en brouillon
+  - ne retourne pas de payload en cas de succès (`204`)
+  - échoue si la facture n'est pas dans un état publiable
