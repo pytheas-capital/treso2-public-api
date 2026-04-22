@@ -12,14 +12,14 @@ http:
     type: json
     data: |-
       {
-        "validatorEmail": "",
-        "internalCode": "",
-        "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
-        "validatorFirstName": "",
-        "validatorLastName": "",
-        "nextValidatorEmail": "",
-        "rank": "",
-        "parentBusinessUnitCode": ""
+        "validatorEmail": "approbateur.n1@pytheas.fr",
+        "internalCode": "ETAB-001",
+        "subsidiaryRegistrationId": "80770824300066",
+        "validatorFirstName": "Camille",
+        "validatorLastName": "Durand",
+        "nextValidatorEmail": "approbateur.n2@pytheas.fr",
+        "rank": "1",
+        "parentBusinessUnitCode": "AGENCE-LILLE"
       }
   auth: inherit
 
@@ -39,14 +39,14 @@ examples:
         type: json
         data: |-
           {
-            "validatorEmail": "",
-            "internalCode": "",
-            "subsidiaryRegistrationId": "80770824300066 ou MONACOXXX00000",
-            "validatorFirstName": "",
-            "validatorLastName": "",
-            "nextValidatorEmail": "",
-            "rank": "",
-            "parentBusinessUnitCode": ""
+            "validatorEmail": "approbateur.n1@pytheas.fr",
+            "internalCode": "ETAB-001",
+            "subsidiaryRegistrationId": "80770824300066",
+            "validatorFirstName": "Camille",
+            "validatorLastName": "Durand",
+            "nextValidatorEmail": "approbateur.n2@pytheas.fr",
+            "rank": "1",
+            "parentBusinessUnitCode": "AGENCE-LILLE"
           }
     response:
       status: 201
@@ -58,7 +58,7 @@ examples:
         type: json
         data: |-
           {
-            "businessValidatorId": ""
+            "businessValidatorId": "BV-2026-001"
           }
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée

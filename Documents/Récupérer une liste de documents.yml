@@ -12,7 +12,9 @@ http:
     type: json
     data: |-
       {
-        "invoiceIds": []
+        "invoiceIds": [
+          "123e4567-e89b-12d3-a456-426614174000"
+        ]
       }
   auth: inherit
 
@@ -32,7 +34,9 @@ examples:
         type: json
         data: |-
           {
-            "invoiceIds": []
+            "invoiceIds": [
+              "123e4567-e89b-12d3-a456-426614174000"
+            ]
           }
     response:
       status: 200
@@ -45,8 +49,10 @@ examples:
         data: |-
           [
             {
-              "invoiceId": "",
-              "downloadLinks": []
+              "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
+              "downloadLinks": [
+                "{{baseUrl}}/v3/invoices/123e4567-e89b-12d3-a456-426614174000/files/facturx"
+              ]
             }
           ]
   - name: 201 Response
@@ -57,7 +63,9 @@ examples:
         type: json
         data: |-
           {
-            "invoiceIds": []
+            "invoiceIds": [
+              "123e4567-e89b-12d3-a456-426614174000"
+            ]
           }
     response:
       status: 201

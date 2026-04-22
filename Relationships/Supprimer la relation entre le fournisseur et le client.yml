@@ -10,11 +10,11 @@ http:
   url: "{{baseUrl}}/v3/relationships"
   params:
     - name: customer_id
-      value: ""
+      value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
       type: query
       description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de fournisseurs ou un tableau vide".
     - name: supplier_id
-      value: ""
+      value: "0199cd10-4c11-7199-b0df-6747d1f3691b"
       type: query
       description: Identifiant unique du fournisseur. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de fournisseurs ou un tableau vide".
     - name: type
@@ -42,11 +42,11 @@ examples:
       method: DELETE
       params:
         - name: customer_id
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
           type: query
           description: Identifiant unique du client. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de fournisseurs ou un tableau vide".
         - name: supplier_id
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691b"
           type: query
           description: Identifiant unique du fournisseur. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer une liste de fournisseurs ou un tableau vide".
         - name: type

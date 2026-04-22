@@ -18,7 +18,7 @@ http:
       type: query
       description: Nombre d'éléments à retourner par page (Maximum 100)
     - name: validator_email
-      value: ""
+      value: "chantier.manager@pytheas.fr"
       type: query
       description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
       disabled: true
@@ -66,7 +66,7 @@ examples:
           type: query
           description: Nombre d'éléments à retourner par page (Maximum 100)
         - name: validator_email
-          value: ""
+          value: "chantier.manager@pytheas.fr"
           type: query
           description: Email du responsable en charge du centre d'affaire (chantier, mission, programme…)
           disabled: true
@@ -101,18 +101,18 @@ examples:
         data: |-
           [
             {
-              "createdAt": "",
-              "createdAtTS": 0,
-              "updatedAt": "",
-              "updatedAtTS": 0,
-              "companyId": "",
-              "subsidiaryRegistrationId": "",
-              "validatorEmail": "",
-              "internalCode": "",
-              "businessUnitId": "",
-              "businessUnitCode": "",
-              "parentBusinessUnitCode": "",
-              "companyName": ""
+              "createdAt": "2026-04-01T09:00:00.000Z",
+              "createdAtTS": 1711962000000,
+              "updatedAt": "2026-04-02T10:15:00.000Z",
+              "updatedAtTS": 1712052900000,
+              "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+              "subsidiaryRegistrationId": "80770824300066",
+              "validatorEmail": "chantier.manager@pytheas.fr",
+              "internalCode": "ETAB-001",
+              "businessUnitId": "BU-2026-001",
+              "businessUnitCode": "CHANTIER-2026-001",
+              "parentBusinessUnitCode": "AGENCE-LILLE",
+              "companyName": "Pytheas Capital Advisors"
             }
           ]
   - name: 401 Response

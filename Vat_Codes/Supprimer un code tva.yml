@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/vat-codes/:vatCodeId"
   params:
     - name: vatCodeId
-      value: ""
+      value: "VAT-2026-001"
       type: path
   auth: inherit
 
@@ -28,7 +28,7 @@ examples:
       method: DELETE
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 200
@@ -43,7 +43,7 @@ examples:
       method: DELETE
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 400
@@ -58,7 +58,7 @@ examples:
       method: DELETE
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 401
@@ -73,7 +73,7 @@ examples:
       method: DELETE
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 403
@@ -88,7 +88,7 @@ examples:
       method: DELETE
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 500

@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/custom-fields/:id"
   params:
     - name: id
-      value: ""
+      value: "CF-2026-001"
       type: path
   body:
     type: json
@@ -19,13 +19,13 @@ http:
         "key": "internalKey",
         "name": "Clé interne",
         "type": "MULTIPLE",
-        "companyId": "companyId",
-        "description": "",
+        "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+        "description": "Champ métier interne utilisé pour le rapprochement",
         "required": false,
         "values": [
           {
-            "value": "",
-            "description": ""
+            "value": "INTERNAL_A",
+            "description": "Champ métier interne utilisé pour le rapprochement"
           }
         ]
       }
@@ -54,13 +54,13 @@ examples:
             "key": "internalKey",
             "name": "Clé interne",
             "type": "MULTIPLE",
-            "companyId": "companyId",
-            "description": "",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "description": "Champ métier interne utilisé pour le rapprochement",
             "required": false,
             "values": [
               {
-                "value": "",
-                "description": ""
+                "value": "INTERNAL_A",
+                "description": "Champ métier interne utilisé pour le rapprochement"
               }
             ]
           }
@@ -86,13 +86,13 @@ examples:
             "key": "internalKey",
             "name": "Clé interne",
             "type": "MULTIPLE",
-            "companyId": "companyId",
-            "description": "",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "description": "Champ métier interne utilisé pour le rapprochement",
             "required": false,
             "values": [
               {
-                "value": "",
-                "description": ""
+                "value": "INTERNAL_A",
+                "description": "Champ métier interne utilisé pour le rapprochement"
               }
             ]
           }
@@ -118,13 +118,13 @@ examples:
             "key": "internalKey",
             "name": "Clé interne",
             "type": "MULTIPLE",
-            "companyId": "companyId",
-            "description": "",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "description": "Champ métier interne utilisé pour le rapprochement",
             "required": false,
             "values": [
               {
-                "value": "",
-                "description": ""
+                "value": "INTERNAL_A",
+                "description": "Champ métier interne utilisé pour le rapprochement"
               }
             ]
           }
@@ -150,13 +150,13 @@ examples:
             "key": "internalKey",
             "name": "Clé interne",
             "type": "MULTIPLE",
-            "companyId": "companyId",
-            "description": "",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "description": "Champ métier interne utilisé pour le rapprochement",
             "required": false,
             "values": [
               {
-                "value": "",
-                "description": ""
+                "value": "INTERNAL_A",
+                "description": "Champ métier interne utilisé pour le rapprochement"
               }
             ]
           }
@@ -182,13 +182,13 @@ examples:
             "key": "internalKey",
             "name": "Clé interne",
             "type": "MULTIPLE",
-            "companyId": "companyId",
-            "description": "",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "description": "Champ métier interne utilisé pour le rapprochement",
             "required": false,
             "values": [
               {
-                "value": "",
-                "description": ""
+                "value": "INTERNAL_A",
+                "description": "Champ métier interne utilisé pour le rapprochement"
               }
             ]
           }
@@ -214,13 +214,13 @@ examples:
             "key": "internalKey",
             "name": "Clé interne",
             "type": "MULTIPLE",
-            "companyId": "companyId",
-            "description": "",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "description": "Champ métier interne utilisé pour le rapprochement",
             "required": false,
             "values": [
               {
-                "value": "",
-                "description": ""
+                "value": "INTERNAL_A",
+                "description": "Champ métier interne utilisé pour le rapprochement"
               }
             ]
           }

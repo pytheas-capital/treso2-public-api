@@ -10,19 +10,19 @@ http:
   url: "{{baseUrl}}/v3/accounting/:id/ledger-entry/:accountNumber/axes/:axisKey/analytical-code/:code"
   params:
     - name: id
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant de la facture ou de l'avoir
     - name: accountNumber
-      value: ""
+      value: "401000"
       type: path
       description: Numéro de compte comptable
     - name: axisKey
-      value: ""
+      value: "DEPARTMENT"
       type: path
       description: La clé de l'axe analytique
     - name: code
-      value: ""
+      value: "DEPT001"
       type: path
       description: Le code analytique à supprimer
   auth: inherit

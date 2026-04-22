@@ -10,14 +10,14 @@ http:
   url: "{{baseUrl}}/v3/receipt-slips/:receiptSlipId/file"
   params:
     - name: receiptSlipId
-      value: ""
+      value: "RSID-2024-001"
       type: path
       description: Identifiant du bon de réception auto généré par la plateforme.
   body:
     type: json
     data: |-
       {
-        "name": ""
+        "name": "receipt-slip.pdf"
       }
   auth: inherit
 
@@ -34,14 +34,14 @@ examples:
       method: POST
       params:
         - name: receiptSlipId
-          value: ""
+          value: "RSID-2024-001"
           type: path
           description: Identifiant du bon de réception auto généré par la plateforme.
       body:
         type: json
         data: |-
           {
-            "name": ""
+            "name": "receipt-slip.pdf"
           }
     response:
       status: 201

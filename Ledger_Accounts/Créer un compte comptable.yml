@@ -12,10 +12,13 @@ http:
     type: json
     data: |-
       {
-        "number": "A102030",
+        "number": "401000",
         "label": "Charges d'exploitation",
         "active": true,
-        "company": ""
+        "company": {
+              "companyRegistrationId": "807708243",
+              "subsidiaryRegistrationId": "80770824300066"
+            }
       }
   auth: inherit
 
@@ -35,10 +38,13 @@ examples:
         type: json
         data: |-
           {
-            "number": "A102030",
+            "number": "401000",
             "label": "Charges d'exploitation",
             "active": true,
-            "company": ""
+            "company": {
+              "companyRegistrationId": "807708243",
+              "subsidiaryRegistrationId": "80770824300066"
+            }
           }
     response:
       status: 201
@@ -50,15 +56,15 @@ examples:
         type: json
         data: |-
           {
-            "createdAt": "",
-            "createdAtTS": 0,
-            "updatedAt": "",
-            "updatedAtTS": 0,
-            "ledgerAccountId": "",
-            "number": "",
-            "label": "",
-            "active": false,
-            "companyId": ""
+            "createdAt": "2026-04-01T09:00:00.000Z",
+            "createdAtTS": 1711962000000,
+            "updatedAt": "2026-04-02T10:15:00.000Z",
+            "updatedAtTS": 1712052900000,
+            "ledgerAccountId": "LA-2026-001",
+            "number": "401000",
+            "label": "Charges d'exploitation",
+            "active": true,
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a"
           }
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
@@ -69,10 +75,13 @@ examples:
         type: json
         data: |-
           {
-            "number": "A102030",
+            "number": "401000",
             "label": "Charges d'exploitation",
             "active": true,
-            "company": ""
+            "company": {
+              "companyRegistrationId": "807708243",
+              "subsidiaryRegistrationId": "80770824300066"
+            }
           }
     response:
       status: 400
@@ -89,10 +98,13 @@ examples:
         type: json
         data: |-
           {
-            "number": "A102030",
+            "number": "401000",
             "label": "Charges d'exploitation",
             "active": true,
-            "company": ""
+            "company": {
+              "companyRegistrationId": "807708243",
+              "subsidiaryRegistrationId": "80770824300066"
+            }
           }
     response:
       status: 401
@@ -109,10 +121,13 @@ examples:
         type: json
         data: |-
           {
-            "number": "A102030",
+            "number": "401000",
             "label": "Charges d'exploitation",
             "active": true,
-            "company": ""
+            "company": {
+              "companyRegistrationId": "807708243",
+              "subsidiaryRegistrationId": "80770824300066"
+            }
           }
     response:
       status: 403
@@ -129,10 +144,13 @@ examples:
         type: json
         data: |-
           {
-            "number": "A102030",
+            "number": "401000",
             "label": "Charges d'exploitation",
             "active": true,
-            "company": ""
+            "company": {
+              "companyRegistrationId": "807708243",
+              "subsidiaryRegistrationId": "80770824300066"
+            }
           }
     response:
       status: 500

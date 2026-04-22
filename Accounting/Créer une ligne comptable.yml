@@ -10,22 +10,22 @@ http:
   url: "{{baseUrl}}/v3/accounting/:id/ledger-entry"
   params:
     - name: id
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant de la facture ou de l'avoir
   body:
     type: json
     data: |-
       {
-        "accountNumber": "A102030",
+        "accountNumber": "401000",
         "auxiliaryAccountNumber": "FOURNISSEUR",
         "description": "Charges d'exploitation",
-        "vatCode": "VAT20",
+        "vatCode": "VAT_20",
         "amount": "2000",
         "type": "DEBIT",
         "axes": [
           {
-            "axisKey": "DEPARTEMENT",
+            "axisKey": "DEPARTMENT",
             "codes": [
               {
                 "code": "DEPT001",
@@ -51,22 +51,22 @@ examples:
       method: POST
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT",
             "axes": [
               {
-                "axisKey": "DEPARTEMENT",
+                "axisKey": "DEPARTMENT",
                 "codes": [
                   {
                     "code": "DEPT001",
@@ -88,22 +88,22 @@ examples:
           {
             "lines": [
               {
-                "accountNumber": "",
-                "accountLabel": "",
-                "auxiliaryAccountNumber": "",
-                "description": "",
-                "amount": 0,
+                "accountNumber": "401000",
+                "accountLabel": "Charges d'exploitation",
+                "auxiliaryAccountNumber": "FOURNISSEUR",
+                "description": "Charges d'exploitation",
+                "amount": 2000,
                 "type": "DEBIT",
-                "vatCode": "",
+                "vatCode": "VAT_20",
                 "axes": [
                   {
-                    "axisKey": "",
-                    "axisLabel": "",
+                    "axisKey": "DEPARTMENT",
+                    "axisLabel": "Département",
                     "codes": [
                       {
-                        "code": "",
-                        "label": "",
-                        "amount": 0
+                        "code": "DEPT001",
+                        "label": "Département des ventes",
+                        "amount": 2000
                       }
                     ]
                   }
@@ -119,22 +119,22 @@ examples:
       method: POST
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT",
             "axes": [
               {
-                "axisKey": "DEPARTEMENT",
+                "axisKey": "DEPARTMENT",
                 "codes": [
                   {
                     "code": "DEPT001",
@@ -164,15 +164,15 @@ examples:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT",
             "axes": [
               {
-                "axisKey": "DEPARTEMENT",
+                "axisKey": "DEPARTMENT",
                 "codes": [
                   {
                     "code": "DEPT001",
@@ -202,15 +202,15 @@ examples:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT",
             "axes": [
               {
-                "axisKey": "DEPARTEMENT",
+                "axisKey": "DEPARTMENT",
                 "codes": [
                   {
                     "code": "DEPT001",
@@ -240,15 +240,15 @@ examples:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT",
             "axes": [
               {
-                "axisKey": "DEPARTEMENT",
+                "axisKey": "DEPARTMENT",
                 "codes": [
                   {
                     "code": "DEPT001",
@@ -278,15 +278,15 @@ examples:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT",
             "axes": [
               {
-                "axisKey": "DEPARTEMENT",
+                "axisKey": "DEPARTMENT",
                 "codes": [
                   {
                     "code": "DEPT001",

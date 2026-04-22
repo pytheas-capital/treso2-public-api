@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/vat-codes/:vatCodeId"
   params:
     - name: vatCodeId
-      value: ""
+      value: "VAT-2026-001"
       type: path
   auth: inherit
 
@@ -28,7 +28,7 @@ examples:
       method: GET
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 200
@@ -40,19 +40,19 @@ examples:
         type: json
         data: |-
           {
-            "createdAt": "",
-            "createdAtTS": 0,
-            "updatedAt": "",
-            "updatedAtTS": 0,
-            "vatCodeId": "",
-            "companyId": "",
-            "code": "",
-            "label": "",
-            "percentage": 0,
-            "countryCode": "",
-            "vatCollectedAccount": "",
-            "vatDeductibleAccount": "",
-            "active": false
+            "createdAt": "2026-04-01T09:00:00.000Z",
+            "createdAtTS": 1711962000000,
+            "updatedAt": "2026-04-02T10:15:00.000Z",
+            "updatedAtTS": 1712052900000,
+            "vatCodeId": "VAT-2026-001",
+            "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "code": "VAT_20",
+            "label": "TVA 20%",
+            "percentage": 20,
+            "countryCode": "FR",
+            "vatCollectedAccount": "445710",
+            "vatDeductibleAccount": "445660",
+            "active": true
           }
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
@@ -61,7 +61,7 @@ examples:
       method: GET
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 400
@@ -76,7 +76,7 @@ examples:
       method: GET
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 401
@@ -91,7 +91,7 @@ examples:
       method: GET
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 403
@@ -106,7 +106,7 @@ examples:
       method: GET
       params:
         - name: vatCodeId
-          value: ""
+          value: "VAT-2026-001"
           type: path
     response:
       status: 500

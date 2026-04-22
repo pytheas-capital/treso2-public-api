@@ -13,7 +13,7 @@ http:
     data: |-
       {
         "invoicingContext": "B2Bd",
-        "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+        "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
         "itemType": "380",
         "documentId": "INV-2026-001",
         "internalDocumentId": "INT-INV-2026-001",
@@ -32,7 +32,6 @@ http:
           "companyRegistrationSchemeId": "0002",
           "vat": "FR12807708243",
           "subsidiaryRegistrationId": "80770824300009",
-          "subsidiaryRegistrationSchemeId": "0009",
           "internalCode": "SELLER-001",
           "electronicAddress": "807708243_STATUTS",
           "electronicAddressSchemeId": "0225"
@@ -41,7 +40,6 @@ http:
           "companyRegistrationId": "552100554",
           "companyRegistrationSchemeId": "0002",
           "subsidiaryRegistrationId": "55210055400005",
-          "subsidiaryRegistrationSchemeId": "0009",
           "internalCode": "BUYER-001",
           "electronicAddress": "552100554",
           "electronicAddressSchemeId": "0225",
@@ -203,7 +201,7 @@ http:
         "projectRef": "PRJ-2026-CRM",
         "tenderRef": "TO-2026-001",
         "objectRef": "OBJ-2026-001",
-        "objectRefSchemeId": "APT",
+        "objectRefSchemeId": "AAK",
         "objectRefs": [
           "OBJ-2026-001",
           "OBJ-2026-002"
@@ -281,9 +279,7 @@ http:
           }
         },
         "singleTaxPayer": {
-          "companyId": "807708243",
-          "companyIdScheme": "0002",
-          "mention": "Assujetti unique",
+          "companyRegistrationId": "807708243",
           "vat": "FR42807708243"
         },
         "sellerTaxRepresentative": {
@@ -315,7 +311,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-INV-2026-001",
@@ -334,7 +330,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-001",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -343,7 +338,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-001",
               "electronicAddress": "552100554",
               "electronicAddressSchemeId": "0225",
@@ -505,7 +499,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -583,9 +577,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -612,12 +604,11 @@ examples:
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-001",
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "status": 225,
             "vatDueDateCode": "3",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
@@ -631,7 +622,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -647,7 +638,12 @@ examples:
             "sellerAgent": "",
             "invoicee": "",
             "sellerTaxRepresentative": "",
-            "singleTaxPayer": "",
+            "singleTaxPayer": {
+            "companyRegistrationId": "807708243",
+            "companyRegistrationSchemeId": "0231",
+            "mention": "MEMBRE_ASSUJETTI_UNIQUE",
+            "vat": "FR12807708243"
+          },
             "deliveryInformation": "",
             "notes": [
               {
@@ -760,7 +756,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bi",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-002",
             "internalDocumentId": "INT-INV-2026-002",
@@ -779,7 +775,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-INTL",
               "electronicAddress": "80770824300009",
               "electronicAddressSchemeId": "0009"
@@ -957,7 +952,7 @@ examples:
             "projectRef": "PRJ-2026-EXPORT",
             "tenderRef": "TO-INTL-2026-001",
             "objectRef": "OBJ-INTL-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-INTL-001",
               "OBJ-INTL-002"
@@ -1035,9 +1030,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -1064,12 +1057,11 @@ examples:
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-001",
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "status": 225,
             "vatDueDateCode": "3",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
@@ -1083,7 +1075,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -1099,7 +1091,12 @@ examples:
             "sellerAgent": "",
             "invoicee": "",
             "sellerTaxRepresentative": "",
-            "singleTaxPayer": "",
+            "singleTaxPayer": {
+            "companyRegistrationId": "807708243",
+            "companyRegistrationSchemeId": "0231",
+            "mention": "MEMBRE_ASSUJETTI_UNIQUE",
+            "vat": "FR12807708243"
+          },
             "deliveryInformation": "",
             "notes": [
               {
@@ -1212,7 +1209,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2G",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-003",
             "internalDocumentId": "INT-INV-2026-003",
@@ -1231,7 +1228,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-PUBLIC",
               "name": "Acme Corporation",
               "electronicAddress": "80770824300012",
@@ -1247,7 +1243,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-PUBLIC",
               "name": "Ville de Paris",
               "electronicAddress": "55210055400005",
@@ -1410,7 +1405,7 @@ examples:
             "projectRef": "PRJ-2026-PUBLIC",
             "tenderRef": "TO-2026-PUBLIC",
             "objectRef": "OBJ-B2G-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2G-001",
               "OBJ-B2G-002"
@@ -1467,9 +1462,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -1496,12 +1489,11 @@ examples:
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-001",
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "status": 225,
             "vatDueDateCode": "3",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
@@ -1515,7 +1507,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -1531,7 +1523,12 @@ examples:
             "sellerAgent": "",
             "invoicee": "",
             "sellerTaxRepresentative": "",
-            "singleTaxPayer": "",
+            "singleTaxPayer": {
+            "companyRegistrationId": "807708243",
+            "companyRegistrationSchemeId": "0231",
+            "mention": "MEMBRE_ASSUJETTI_UNIQUE",
+            "vat": "FR12807708243"
+          },
             "deliveryInformation": "",
             "notes": [
               {
@@ -1644,7 +1641,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2C",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-004",
             "internalDocumentId": "INT-INV-2026-004",
@@ -1663,7 +1660,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-B2C",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -1826,7 +1822,7 @@ examples:
             "projectRef": "PRJ-2026-CONSUMER",
             "tenderRef": "TO-2026-CONSUMER",
             "objectRef": "OBJ-B2C-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2C-001",
               "OBJ-B2C-002"
@@ -1868,12 +1864,11 @@ examples:
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-001",
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "status": 225,
             "vatDueDateCode": "3",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
@@ -1887,7 +1882,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -1903,7 +1898,12 @@ examples:
             "sellerAgent": "",
             "invoicee": "",
             "sellerTaxRepresentative": "",
-            "singleTaxPayer": "",
+            "singleTaxPayer": {
+            "companyRegistrationId": "807708243",
+            "companyRegistrationSchemeId": "0231",
+            "mention": "MEMBRE_ASSUJETTI_UNIQUE",
+            "vat": "FR12807708243"
+          },
             "deliveryInformation": "",
             "notes": [
               {
@@ -2016,7 +2016,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-INV-2026-001",
@@ -2035,7 +2035,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-001",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -2044,7 +2043,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-001",
               "electronicAddress": "552100554",
               "electronicAddressSchemeId": "0225",
@@ -2206,7 +2204,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -2284,9 +2282,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -2315,7 +2311,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bi",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-002",
             "internalDocumentId": "INT-INV-2026-002",
@@ -2334,7 +2330,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-INTL",
               "electronicAddress": "80770824300009",
               "electronicAddressSchemeId": "0009"
@@ -2512,7 +2507,7 @@ examples:
             "projectRef": "PRJ-2026-EXPORT",
             "tenderRef": "TO-INTL-2026-001",
             "objectRef": "OBJ-INTL-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-INTL-001",
               "OBJ-INTL-002"
@@ -2590,9 +2585,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -2621,7 +2614,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2G",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-003",
             "internalDocumentId": "INT-INV-2026-003",
@@ -2640,7 +2633,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-PUBLIC",
               "name": "Acme Corporation",
               "electronicAddress": "80770824300012",
@@ -2656,7 +2648,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-PUBLIC",
               "name": "Ville de Paris",
               "electronicAddress": "55210055400005",
@@ -2819,7 +2810,7 @@ examples:
             "projectRef": "PRJ-2026-PUBLIC",
             "tenderRef": "TO-2026-PUBLIC",
             "objectRef": "OBJ-B2G-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2G-001",
               "OBJ-B2G-002"
@@ -2876,9 +2867,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -2907,7 +2896,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2C",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-004",
             "internalDocumentId": "INT-INV-2026-004",
@@ -2926,7 +2915,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-B2C",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -3089,7 +3077,7 @@ examples:
             "projectRef": "PRJ-2026-CONSUMER",
             "tenderRef": "TO-2026-CONSUMER",
             "objectRef": "OBJ-B2C-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2C-001",
               "OBJ-B2C-002"
@@ -3133,7 +3121,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-INV-2026-001",
@@ -3152,7 +3140,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-001",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -3161,7 +3148,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-001",
               "electronicAddress": "552100554",
               "electronicAddressSchemeId": "0225",
@@ -3323,7 +3309,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -3401,9 +3387,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -3432,7 +3416,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bi",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-002",
             "internalDocumentId": "INT-INV-2026-002",
@@ -3451,7 +3435,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-INTL",
               "electronicAddress": "80770824300009",
               "electronicAddressSchemeId": "0009"
@@ -3629,7 +3612,7 @@ examples:
             "projectRef": "PRJ-2026-EXPORT",
             "tenderRef": "TO-INTL-2026-001",
             "objectRef": "OBJ-INTL-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-INTL-001",
               "OBJ-INTL-002"
@@ -3707,9 +3690,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -3738,7 +3719,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2G",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-003",
             "internalDocumentId": "INT-INV-2026-003",
@@ -3757,7 +3738,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-PUBLIC",
               "name": "Acme Corporation",
               "electronicAddress": "80770824300012",
@@ -3773,7 +3753,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-PUBLIC",
               "name": "Ville de Paris",
               "electronicAddress": "55210055400005",
@@ -3936,7 +3915,7 @@ examples:
             "projectRef": "PRJ-2026-PUBLIC",
             "tenderRef": "TO-2026-PUBLIC",
             "objectRef": "OBJ-B2G-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2G-001",
               "OBJ-B2G-002"
@@ -3993,9 +3972,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -4024,7 +4001,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2C",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-004",
             "internalDocumentId": "INT-INV-2026-004",
@@ -4043,7 +4020,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-B2C",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -4206,7 +4182,7 @@ examples:
             "projectRef": "PRJ-2026-CONSUMER",
             "tenderRef": "TO-2026-CONSUMER",
             "objectRef": "OBJ-B2C-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2C-001",
               "OBJ-B2C-002"
@@ -4250,7 +4226,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-INV-2026-001",
@@ -4269,7 +4245,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-001",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -4278,7 +4253,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-001",
               "electronicAddress": "552100554",
               "electronicAddressSchemeId": "0225",
@@ -4440,7 +4414,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -4518,9 +4492,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -4549,7 +4521,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bi",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-002",
             "internalDocumentId": "INT-INV-2026-002",
@@ -4568,7 +4540,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-INTL",
               "electronicAddress": "80770824300009",
               "electronicAddressSchemeId": "0009"
@@ -4746,7 +4717,7 @@ examples:
             "projectRef": "PRJ-2026-EXPORT",
             "tenderRef": "TO-INTL-2026-001",
             "objectRef": "OBJ-INTL-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-INTL-001",
               "OBJ-INTL-002"
@@ -4824,9 +4795,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -4855,7 +4824,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2G",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-003",
             "internalDocumentId": "INT-INV-2026-003",
@@ -4874,7 +4843,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-PUBLIC",
               "name": "Acme Corporation",
               "electronicAddress": "80770824300012",
@@ -4890,7 +4858,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-PUBLIC",
               "name": "Ville de Paris",
               "electronicAddress": "55210055400005",
@@ -5053,7 +5020,7 @@ examples:
             "projectRef": "PRJ-2026-PUBLIC",
             "tenderRef": "TO-2026-PUBLIC",
             "objectRef": "OBJ-B2G-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2G-001",
               "OBJ-B2G-002"
@@ -5110,9 +5077,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -5141,7 +5106,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2C",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-004",
             "internalDocumentId": "INT-INV-2026-004",
@@ -5160,7 +5125,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-B2C",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -5323,7 +5287,7 @@ examples:
             "projectRef": "PRJ-2026-CONSUMER",
             "tenderRef": "TO-2026-CONSUMER",
             "objectRef": "OBJ-B2C-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2C-001",
               "OBJ-B2C-002"
@@ -5367,7 +5331,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-INV-2026-001",
@@ -5386,7 +5350,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-001",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -5395,7 +5358,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-001",
               "electronicAddress": "552100554",
               "electronicAddressSchemeId": "0225",
@@ -5557,7 +5519,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -5635,9 +5597,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -5666,7 +5626,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2Bi",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-002",
             "internalDocumentId": "INT-INV-2026-002",
@@ -5685,7 +5645,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-INTL",
               "electronicAddress": "80770824300009",
               "electronicAddressSchemeId": "0009"
@@ -5863,7 +5822,7 @@ examples:
             "projectRef": "PRJ-2026-EXPORT",
             "tenderRef": "TO-INTL-2026-001",
             "objectRef": "OBJ-INTL-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-INTL-001",
               "OBJ-INTL-002"
@@ -5941,9 +5900,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -5972,7 +5929,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2G",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-003",
             "internalDocumentId": "INT-INV-2026-003",
@@ -5991,7 +5948,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-PUBLIC",
               "name": "Acme Corporation",
               "electronicAddress": "80770824300012",
@@ -6007,7 +5963,6 @@ examples:
               "companyRegistrationId": "552100554",
               "companyRegistrationSchemeId": "0002",
               "subsidiaryRegistrationId": "55210055400005",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "BUYER-PUBLIC",
               "name": "Ville de Paris",
               "electronicAddress": "55210055400005",
@@ -6170,7 +6125,7 @@ examples:
             "projectRef": "PRJ-2026-PUBLIC",
             "tenderRef": "TO-2026-PUBLIC",
             "objectRef": "OBJ-B2G-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2G-001",
               "OBJ-B2G-002"
@@ -6227,9 +6182,7 @@ examples:
               }
             },
             "singleTaxPayer": {
-              "companyId": "807708243",
-              "companyIdScheme": "0002",
-              "mention": "Assujetti unique",
+              "companyRegistrationId": "807708243",
               "vat": "FR42807708243"
             },
             "sellerTaxRepresentative": {
@@ -6258,7 +6211,7 @@ examples:
         data: |-
           {
             "invoicingContext": "B2C",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "documentId": "INV-2026-004",
             "internalDocumentId": "INT-INV-2026-004",
@@ -6277,7 +6230,6 @@ examples:
               "companyRegistrationSchemeId": "0002",
               "vat": "FR12807708243",
               "subsidiaryRegistrationId": "80770824300009",
-              "subsidiaryRegistrationSchemeId": "0009",
               "internalCode": "SELLER-B2C",
               "electronicAddress": "807708243_STATUTS",
               "electronicAddressSchemeId": "0225"
@@ -6440,7 +6392,7 @@ examples:
             "projectRef": "PRJ-2026-CONSUMER",
             "tenderRef": "TO-2026-CONSUMER",
             "objectRef": "OBJ-B2C-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-B2C-001",
               "OBJ-B2C-002"

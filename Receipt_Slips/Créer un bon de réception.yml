@@ -31,10 +31,10 @@ http:
             "taxRate": 20
           }
         ],
-        "seller": "",
-        "buyer": "",
-        "sellerId": "",
-        "buyerId": ""
+        "seller": {},
+        "buyer": {},
+        "sellerId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+        "buyerId": "0199cd10-4c11-7199-b0df-6747d1f3691b"
       }
   auth: inherit
 
@@ -73,10 +73,10 @@ examples:
                 "taxRate": 20
               }
             ],
-            "seller": "",
-            "buyer": "",
-            "sellerId": "",
-            "buyerId": ""
+            "seller": {},
+            "buyer": {},
+            "sellerId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "buyerId": "0199cd10-4c11-7199-b0df-6747d1f3691b"
           }
     response:
       status: 200
@@ -88,20 +88,20 @@ examples:
         type: json
         data: |-
           {
-            "createdAt": "",
+            "createdAt": "2024-01-15T10:05:00.000Z",
             "createdAtTS": 0,
-            "updatedAt": "",
+            "updatedAt": "2024-01-15T10:05:00.000Z",
             "updatedAtTS": 0,
-            "receiptSlipId": "",
-            "documentId": "",
-            "purchaseOrderId": "",
-            "seller": "",
-            "buyer": "",
+            "receiptSlipId": "RSID-2024-001",
+            "documentId": "BR-2024-001",
+            "purchaseOrderId": "PO-2024-001",
+            "seller": {},
+            "buyer": {},
             "status": {},
-            "receptionDate": "",
-            "totalAmount": 0,
-            "totalAmountTaxExcluded": 0,
-            "totalAmountTax": 0,
+            "receptionDate": "2024-01-15T10:00:00Z",
+            "totalAmount": 120,
+            "totalAmountTaxExcluded": 100,
+            "totalAmountTax": 20,
             "currency": {},
             "note": "",
             "lines": [
@@ -114,7 +114,7 @@ examples:
                 "taxRate": 0
               }
             ],
-            "filename": ""
+            "filename": "receipt-slip.pdf"
           }
   - name: 201 Response
     request:

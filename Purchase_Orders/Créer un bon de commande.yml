@@ -12,15 +12,15 @@ http:
     type: json
     data: |-
       {
-        "documentId": "",
+        "documentId": "PO-2026-001",
         "status": "PENDING | FULLFILLED | CANCELED",
-        "issueDate": "",
-        "deliveryDate": "",
+        "issueDate": "2026-04-01T00:00:00.000Z",
+        "deliveryDate": "2026-04-15T00:00:00.000Z",
         "totalAmount": 120,
         "totalAmountTaxExcluded": 100,
         "totalTaxAmount": 20,
-        "currency": "",
-        "note": "",
+        "currency": "EUR",
+        "note": "Commande de fournitures bureautiques",
         "lines": [
           {
             "reference": "REF001",
@@ -31,10 +31,10 @@ http:
             "taxRate": 20
           }
         ],
-        "seller": "",
-        "buyer": "",
-        "sellerId": "",
-        "buyerId": ""
+        "seller": {},
+        "buyer": {},
+        "sellerId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+        "buyerId": "0199cd10-4c11-7199-b0df-6747d1f3691b"
       }
   auth: inherit
 
@@ -54,15 +54,15 @@ examples:
         type: json
         data: |-
           {
-            "documentId": "",
+            "documentId": "PO-2026-001",
             "status": "PENDING | FULLFILLED | CANCELED",
-            "issueDate": "",
-            "deliveryDate": "",
+            "issueDate": "2026-04-01T00:00:00.000Z",
+            "deliveryDate": "2026-04-15T00:00:00.000Z",
             "totalAmount": 120,
             "totalAmountTaxExcluded": 100,
             "totalTaxAmount": 20,
-            "currency": "",
-            "note": "",
+            "currency": "EUR",
+            "note": "Commande de fournitures bureautiques",
             "lines": [
               {
                 "reference": "REF001",
@@ -73,10 +73,10 @@ examples:
                 "taxRate": 20
               }
             ],
-            "seller": "",
-            "buyer": "",
-            "sellerId": "",
-            "buyerId": ""
+            "seller": {},
+            "buyer": {},
+            "sellerId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+            "buyerId": "0199cd10-4c11-7199-b0df-6747d1f3691b"
           }
     response:
       status: 200
@@ -88,19 +88,19 @@ examples:
         type: json
         data: |-
           {
-            "createdAt": "",
+            "createdAt": "2026-04-01T09:00:00.000Z",
             "createdAtTS": 0,
-            "updatedAt": "",
+            "updatedAt": "2026-04-01T09:00:00.000Z",
             "updatedAtTS": 0,
-            "purchaseOrderId": "",
-            "documentId": "",
-            "seller": "",
-            "buyer": "",
+            "purchaseOrderId": "POID-2026-001",
+            "documentId": "PO-2026-001",
+            "seller": {},
+            "buyer": {},
             "status": {},
-            "deliveryDate": "",
-            "totalAmount": 0,
+            "deliveryDate": "2026-04-15T00:00:00.000Z",
+            "totalAmount": 120,
             "currency": {},
-            "filename": "",
+            "filename": "purchase-order.pdf",
             "notes": [
               {
                 "text": "",
@@ -109,9 +109,9 @@ examples:
                 "email": ""
               }
             ],
-            "issueDate": "",
-            "totalAmountTaxExcluded": 0,
-            "totalTaxAmount": 0,
+            "issueDate": "2026-04-01T00:00:00.000Z",
+            "totalAmountTaxExcluded": 100,
+            "totalTaxAmount": 20,
             "lines": [
               {
                 "reference": "",
@@ -131,15 +131,15 @@ examples:
         type: json
         data: |-
           {
-            "documentId": "",
+            "documentId": "PO-2026-001",
             "status": "PENDING | FULLFILLED | CANCELED",
-            "issueDate": "",
-            "deliveryDate": "",
+            "issueDate": "2026-04-01T00:00:00.000Z",
+            "deliveryDate": "2026-04-15T00:00:00.000Z",
             "totalAmount": 120,
             "totalAmountTaxExcluded": 100,
             "totalTaxAmount": 20,
-            "currency": "",
-            "note": "",
+            "currency": "EUR",
+            "note": "Commande de fournitures bureautiques",
             "lines": [
               {
                 "reference": "REF001",

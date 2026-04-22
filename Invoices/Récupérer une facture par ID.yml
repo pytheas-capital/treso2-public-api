@@ -46,12 +46,11 @@ examples:
             "documentId": "INV-2026-001",
             "internalDocumentId": "INT-001",
             "invoicingContext": "B2Bd",
-            "profile": "urn.cpro.gouv.fr:1p0:extended-ctc-fr",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "status": 225,
             "vatDueDateCode": "3",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
@@ -65,7 +64,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -81,7 +80,12 @@ examples:
             "sellerAgent": "",
             "invoicee": "",
             "sellerTaxRepresentative": "",
-            "singleTaxPayer": "",
+            "singleTaxPayer": {
+            "companyRegistrationId": "807708243",
+            "companyRegistrationSchemeId": "0231",
+            "mention": "MEMBRE_ASSUJETTI_UNIQUE",
+            "vat": "FR12807708243"
+          },
             "deliveryInformation": "",
             "notes": [
               {

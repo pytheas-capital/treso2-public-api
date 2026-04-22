@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/analytical-axes/:analyticalAxisId/analytical-codes"
   params:
     - name: analyticalAxisId
-      value: ""
+      value: "AXIS-2026-001"
       type: path
   body:
     type: json
@@ -40,7 +40,7 @@ examples:
       method: PATCH
       params:
         - name: analyticalAxisId
-          value: ""
+          value: "AXIS-2026-001"
           type: path
       body:
         type: json

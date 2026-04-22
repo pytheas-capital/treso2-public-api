@@ -91,20 +91,20 @@ examples:
         data: |-
           [
             {
-              "createdAt": "",
-              "createdAtTS": 0,
-              "updatedAt": "",
-              "updatedAtTS": 0,
-              "companyId": "",
-              "subsidiaryRegistrationId": "",
-              "validatorEmail": "",
-              "internalCode": "",
-              "businessValidatorId": "",
-              "validatorFirstName": "",
-              "validatorLastName": "",
-              "nextValidatorEmail": "",
-              "rank": "",
-              "parentBusinessUnitCode": ""
+              "createdAt": "2026-04-01T09:00:00.000Z",
+              "createdAtTS": 1711962000000,
+              "updatedAt": "2026-04-02T10:15:00.000Z",
+              "updatedAtTS": 1712052900000,
+              "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691a",
+              "subsidiaryRegistrationId": "80770824300066",
+              "validatorEmail": "approbateur.n1@pytheas.fr",
+              "internalCode": "ETAB-001",
+              "businessValidatorId": "BV-2026-001",
+              "validatorFirstName": "Camille",
+              "validatorLastName": "Durand",
+              "nextValidatorEmail": "approbateur.n2@pytheas.fr",
+              "rank": "1",
+              "parentBusinessUnitCode": "AGENCE-LILLE"
             }
           ]
   - name: 401 Response

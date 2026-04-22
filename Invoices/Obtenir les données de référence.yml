@@ -87,10 +87,33 @@ examples:
             "profiles": [
               {}
             ],
-            "pdpStatuses": [
+            "processConditionCodes": [
               {
-                "code": 225,
-                "description": ""
+                "code": "204",
+                "name": "Prise en charge",
+                "responsibleParty": "Acheteur (BY/AB)"
+              },
+              {
+                "code": "205",
+                "name": "Approuvée",
+                "responsibleParty": "Acheteur (BY/AB)"
+              },
+              {
+                "code": "224",
+                "name": "Demande de Paiement Direct",
+                "responsibleParty": "Vendeur (sous-traitant)"
+              }
+            ],
+            "companyRegistrationSchemeIds": [
+              {
+                "code": "0002",
+                "description": "SIREN"
+              }
+            ],
+            "objectReferenceSchemeIds": [
+              {
+                "code": "AAK",
+                "description": "Despatch advice number"
               }
             ],
             "validVatRates": [
@@ -150,4 +173,7 @@ docs: |-
   - Codes note facture (UNTDID 4451)
   - Codes date exigibilité TVA (UNTDID 2005)
   - Contextes de facturation (B2Bd, B2Bi, B2G, B2C)
+  - Codes processConditionCode
+  - Schémas companyRegistrationSchemeId
+  - Schémas objectRefSchemeId
   - Taux de TVA valides

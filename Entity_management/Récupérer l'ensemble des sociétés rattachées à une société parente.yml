@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/companies/:companyId/subsidiaries"
   params:
     - name: companyId
-      value: ""
+      value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
       type: path
       description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
     - name: offset
@@ -37,7 +37,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
           type: path
           description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
         - name: offset
@@ -59,7 +59,19 @@ examples:
         data: |-
           {
             "companies": [
-              []
+              {
+                "companyId": "0199cd10-4c11-7199-b0df-6747d1f3691b",
+                "siren": "807708243",
+                "siret": "80770824300067",
+                "vatNumber": "FR42807708243",
+                "companyName": "Pytheas Capital Advisors Lille",
+                "street": "12 avenue de Flandre",
+                "zipCode": "59000",
+                "city": "Lille",
+                "country": "FR",
+                "createdAt": "2026-01-20T10:00:00.000Z",
+                "updatedAt": "2026-04-01T09:30:00.000Z"
+              }
             ],
             "totalCount": 2,
             "page": 1,
@@ -73,7 +85,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
           type: path
           description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
         - name: offset
@@ -97,7 +109,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
           type: path
           description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
         - name: offset
@@ -121,7 +133,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
           type: path
           description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
         - name: offset
@@ -145,7 +157,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691a"
           type: path
           description: Identifiant unique de l'entreprise parente. Pour le récupérer, vous pouvez effectuer une recherche à partir de la route "Récupérer mes entreprises".
         - name: offset

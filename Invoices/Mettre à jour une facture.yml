@@ -124,7 +124,7 @@ http:
         "projectRef": "PRJ-2026-CRM",
         "tenderRef": "TO-2026-001",
         "objectRef": "OBJ-2026-001",
-        "objectRefSchemeId": "APT",
+        "objectRefSchemeId": "AAK",
         "objectRefs": [
           "OBJ-2026-001",
           "OBJ-2026-002"
@@ -136,7 +136,6 @@ http:
         "buyerAgent": "",
         "sellerAgent": "",
         "invoicee": "",
-        "singleTaxPayer": "",
         "sellerTaxRepresentative": "",
         "sendEmail": false,
         "recipientEmail": "client@example.com",
@@ -272,7 +271,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -284,7 +283,6 @@ examples:
             "buyerAgent": "",
             "sellerAgent": "",
             "invoicee": "",
-            "singleTaxPayer": "",
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
@@ -417,7 +415,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -429,7 +427,6 @@ examples:
             "buyerAgent": "",
             "sellerAgent": "",
             "invoicee": "",
-            "singleTaxPayer": "",
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
@@ -562,7 +559,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -574,7 +571,6 @@ examples:
             "buyerAgent": "",
             "sellerAgent": "",
             "invoicee": "",
-            "singleTaxPayer": "",
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
@@ -707,7 +703,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -719,7 +715,6 @@ examples:
             "buyerAgent": "",
             "sellerAgent": "",
             "invoicee": "",
-            "singleTaxPayer": "",
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
@@ -852,7 +847,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -864,7 +859,6 @@ examples:
             "buyerAgent": "",
             "sellerAgent": "",
             "invoicee": "",
-            "singleTaxPayer": "",
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
@@ -997,7 +991,7 @@ examples:
             "projectRef": "PRJ-2026-CRM",
             "tenderRef": "TO-2026-001",
             "objectRef": "OBJ-2026-001",
-            "objectRefSchemeId": "APT",
+            "objectRefSchemeId": "AAK",
             "objectRefs": [
               "OBJ-2026-001",
               "OBJ-2026-002"
@@ -1009,7 +1003,6 @@ examples:
             "buyerAgent": "",
             "sellerAgent": "",
             "invoicee": "",
-            "singleTaxPayer": "",
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",

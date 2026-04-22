@@ -10,21 +10,21 @@ http:
   url: "{{baseUrl}}/v3/accounting/:id/ledger-entry/:accountNumber"
   params:
     - name: id
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant de la facture ou de l'avoir
     - name: accountNumber
-      value: ""
+      value: "401000"
       type: path
       description: Numéro de compte de la ligne comptable
   body:
     type: json
     data: |-
       {
-        "accountNumber": "A102030",
+        "accountNumber": "401000",
         "auxiliaryAccountNumber": "FOURNISSEUR",
         "description": "Charges d'exploitation",
-        "vatCode": "VAT20",
+        "vatCode": "VAT_20",
         "amount": "2000",
         "type": "DEBIT"
       }
@@ -43,21 +43,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }
@@ -69,7 +69,34 @@ examples:
           value: application/json
       body:
         type: json
-        data: "{}"
+        data: |-
+          {
+                      "lines": [
+                        {
+                          "accountNumber": "401000",
+                          "accountLabel": "Charges d'exploitation",
+                          "auxiliaryAccountNumber": "FOURNISSEUR",
+                          "description": "Charges d'exploitation",
+                          "amount": 2000,
+                          "type": "DEBIT",
+                          "vatCode": "VAT_20",
+                          "axes": [
+                            {
+                              "axisKey": "DEPARTMENT",
+                              "axisLabel": "Département",
+                              "codes": [
+                                {
+                                  "code": "DEPT001",
+                                  "label": "Département des ventes",
+                                  "amount": 2000
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "isClosed": false
+                    }
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
     request:
@@ -77,21 +104,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }
@@ -108,21 +135,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }
@@ -139,21 +166,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }
@@ -170,21 +197,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }
@@ -201,21 +228,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }
@@ -232,21 +259,21 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
       body:
         type: json
         data: |-
           {
-            "accountNumber": "A102030",
+            "accountNumber": "401000",
             "auxiliaryAccountNumber": "FOURNISSEUR",
             "description": "Charges d'exploitation",
-            "vatCode": "VAT20",
+            "vatCode": "VAT_20",
             "amount": "2000",
             "type": "DEBIT"
           }

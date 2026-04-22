@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/documents/:invoiceId"
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
   auth: inherit
 
@@ -28,7 +28,7 @@ examples:
       method: GET
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
     response:
       status: 200
@@ -37,8 +37,8 @@ examples:
         - name: Content-Type
           value: application/json
       body:
-        type: json
-        data: "{}"
+        type: text
+        data: "<binary file stream omitted>"
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
     request:

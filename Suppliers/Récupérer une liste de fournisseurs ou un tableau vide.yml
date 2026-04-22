@@ -17,6 +17,10 @@ http:
       value: "25"
       type: query
       description: Nombre d'éléments à retourner par page (Maximum 100)
+    - name: status
+      value: ACTIVE
+      type: query
+      disabled: true
     - name: createdAt
       value: ""
       type: query
@@ -68,6 +72,10 @@ examples:
           value: "25"
           type: query
           description: Nombre d'éléments à retourner par page (Maximum 100)
+        - name: status
+          value: ACTIVE
+          type: query
+          disabled: true
         - name: createdAt
           value: ""
           type: query

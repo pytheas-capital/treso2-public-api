@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/accounting/:id/close"
   params:
     - name: id
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant de la facture ou de l'avoir
   auth: inherit
@@ -28,7 +28,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -39,7 +39,8 @@ examples:
           value: application/json
       body:
         type: json
-        data: "{}"
+        data: |-
+          {}
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
     request:
@@ -47,7 +48,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -63,7 +64,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -79,7 +80,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -95,7 +96,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -111,7 +112,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -127,7 +128,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
     response:
@@ -138,31 +139,31 @@ examples:
         type: json
         data: |-
           {
-            "lines": [
-              {
-                "accountNumber": "",
-                "accountLabel": "",
-                "auxiliaryAccountNumber": "",
-                "description": "",
-                "amount": 0,
-                "type": "DEBIT",
-                "vatCode": "",
-                "axes": [
-                  {
-                    "axisKey": "",
-                    "axisLabel": "",
-                    "codes": [
-                      {
-                        "code": "",
-                        "label": "",
-                        "amount": 0
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "isClosed": false
-          }
+                      "lines": [
+                        {
+                          "accountNumber": "401000",
+                          "accountLabel": "Charges d'exploitation",
+                          "auxiliaryAccountNumber": "FOURNISSEUR",
+                          "description": "Charges d'exploitation",
+                          "amount": 2000,
+                          "type": "DEBIT",
+                          "vatCode": "VAT_20",
+                          "axes": [
+                            {
+                              "axisKey": "DEPARTMENT",
+                              "axisLabel": "Département",
+                              "codes": [
+                                {
+                                  "code": "DEPT001",
+                                  "label": "Département des ventes",
+                                  "amount": 2000
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "isClosed": true
+                    }
 
 docs: Cette ressource permet de clôturer la comptabilité d'un document après validation.
