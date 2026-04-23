@@ -17,7 +17,6 @@ http:
         "itemType": "380",
         "documentId": "INV-2026-001",
         "internalDocumentId": "INT-INV-2026-001",
-        "issueDate": "2026-03-15",
         "dueDate": "2026-04-14",
         "currency": "EUR",
         "taxCurrencyCode": "EUR",
@@ -199,7 +198,7 @@ http:
             "countryCode": "FR"
           }
         },
-        "buyerCustomFields": [
+        "customFields": [
           {
             "key": "cost_center",
             "value": "CC-001"
