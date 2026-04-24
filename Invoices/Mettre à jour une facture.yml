@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/invoices/:invoiceId"
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant unique de la facture (UUID)
   body:
@@ -18,14 +18,14 @@ http:
     data: |-
       {
         "documentId": "INV-20260315-12",
-        "profile": "urn:factur-x.eu:1p0:basic",
+        "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
         "itemType": "380",
         "internalDocumentId": "INT-INV-001",
         "issueDate": "2026-03-15",
         "dueDate": "2026-04-14",
         "currency": "EUR",
         "taxCurrencyCode": "EUR",
-        "vatDueDateCode": "29",
+        "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
         "operationCategory": "B1",
         "purchaseOrderId": "PO-2026-001",
         "businessUnitCode": "BU-001",
@@ -62,7 +62,7 @@ http:
             "lineSeller": "",
             "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
             "lineVatExemptionCode": "VATEX-EU-O",
-            "lineVatDueDateCode": "3",
+            "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
             "lineNoteSubjectCode": "REG",
             "articleAttributes": [
               {
@@ -111,7 +111,7 @@ http:
         ],
         "payment": "",
         "deliveryInformation": "",
-        "buyerCustomFields": [
+        "customFields": [
           {
             "key": "internalRef",
             "value": "ABC123"
@@ -138,8 +138,7 @@ http:
         "invoicee": "",
         "sellerTaxRepresentative": "",
         "sendEmail": false,
-        "recipientEmail": "client@example.com",
-        "status": 200
+        "recipientEmail": "client@example.com"
       }
   auth: inherit
 
@@ -157,7 +156,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -165,14 +164,14 @@ examples:
         data: |-
           {
             "documentId": "INV-20260315-12",
-            "profile": "urn:factur-x.eu:1p0:basic",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "internalDocumentId": "INT-INV-001",
             "issueDate": "2026-03-15",
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "29",
+            "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -209,7 +208,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -258,7 +257,7 @@ examples:
             ],
             "payment": "",
             "deliveryInformation": "",
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "internalRef",
                 "value": "ABC123"
@@ -286,8 +285,7 @@ examples:
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
-            "status": 200
-          }
+              }
     response:
       status: 204
       statusText: No Content
@@ -301,7 +299,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -309,14 +307,14 @@ examples:
         data: |-
           {
             "documentId": "INV-20260315-12",
-            "profile": "urn:factur-x.eu:1p0:basic",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "internalDocumentId": "INT-INV-001",
             "issueDate": "2026-03-15",
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "29",
+            "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -353,7 +351,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -402,7 +400,7 @@ examples:
             ],
             "payment": "",
             "deliveryInformation": "",
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "internalRef",
                 "value": "ABC123"
@@ -430,8 +428,7 @@ examples:
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
-            "status": 200
-          }
+              }
     response:
       status: 400
       statusText: Bad Request
@@ -445,7 +442,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -453,14 +450,14 @@ examples:
         data: |-
           {
             "documentId": "INV-20260315-12",
-            "profile": "urn:factur-x.eu:1p0:basic",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "internalDocumentId": "INT-INV-001",
             "issueDate": "2026-03-15",
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "29",
+            "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -497,7 +494,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -546,7 +543,7 @@ examples:
             ],
             "payment": "",
             "deliveryInformation": "",
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "internalRef",
                 "value": "ABC123"
@@ -574,8 +571,7 @@ examples:
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
-            "status": 200
-          }
+              }
     response:
       status: 401
       statusText: Unauthorized
@@ -589,7 +585,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -597,14 +593,14 @@ examples:
         data: |-
           {
             "documentId": "INV-20260315-12",
-            "profile": "urn:factur-x.eu:1p0:basic",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "internalDocumentId": "INT-INV-001",
             "issueDate": "2026-03-15",
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "29",
+            "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -641,7 +637,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -690,7 +686,7 @@ examples:
             ],
             "payment": "",
             "deliveryInformation": "",
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "internalRef",
                 "value": "ABC123"
@@ -718,8 +714,7 @@ examples:
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
-            "status": 200
-          }
+              }
     response:
       status: 403
       statusText: Forbidden
@@ -733,7 +728,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -741,14 +736,14 @@ examples:
         data: |-
           {
             "documentId": "INV-20260315-12",
-            "profile": "urn:factur-x.eu:1p0:basic",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "internalDocumentId": "INT-INV-001",
             "issueDate": "2026-03-15",
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "29",
+            "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -785,7 +780,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -834,7 +829,7 @@ examples:
             ],
             "payment": "",
             "deliveryInformation": "",
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "internalRef",
                 "value": "ABC123"
@@ -862,8 +857,7 @@ examples:
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
-            "status": 200
-          }
+              }
     response:
       status: 404
       statusText: Not Found
@@ -877,7 +871,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -885,14 +879,14 @@ examples:
         data: |-
           {
             "documentId": "INV-20260315-12",
-            "profile": "urn:factur-x.eu:1p0:basic",
+            "profile": "urn:cen.eu:en16931:2017#conformant#urn.cpro.gouv.fr:1p0:extended-ctc-fr",
             "itemType": "380",
             "internalDocumentId": "INT-INV-001",
             "issueDate": "2026-03-15",
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "29",
+            "vatDueDateCode": "ACTUAL_DELIVERY_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -929,7 +923,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -978,7 +972,7 @@ examples:
             ],
             "payment": "",
             "deliveryInformation": "",
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "internalRef",
                 "value": "ABC123"
@@ -1006,8 +1000,7 @@ examples:
             "sellerTaxRepresentative": "",
             "sendEmail": false,
             "recipientEmail": "client@example.com",
-            "status": 200
-          }
+              }
     response:
       status: 500
       statusText: Internal Server Error

@@ -103,10 +103,10 @@ examples:
       method: DELETE
       params:
         - name: analyticalAxisId
-          value: ""
+          value: "AXIS-2026-001"
           type: path
         - name: code
-          value: ""
+          value: "DEPT001"
           type: path
     response:
       status: 500

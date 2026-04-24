@@ -51,7 +51,7 @@ examples:
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "contractRef": "CONTRACT-2026-001",
@@ -122,7 +122,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -176,7 +176,7 @@ examples:
                 "createdBy": "user@example.com"
               }
             ],
-            "buyerCustomFields": [
+            "customFields": [
               {
                 "key": "custom_field_1",
                 "value": [

@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant unique de la facture (UUID)
   auth: inherit
@@ -22,7 +22,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: 204 Response
+  - name: 200 Response
     description: Le brouillon de facture a été publié avec succès
     request:
       url: "{{baseUrl}}/v3/invoices/:invoiceId/publish"
@@ -33,11 +33,31 @@ examples:
           type: path
           description: Identifiant unique de la facture (UUID)
     response:
-      status: 204
-      statusText: No Content
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
       body:
-        type: text
-        data: ""
+        type: json
+        data: |-
+          {
+            "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
+            "warnings": [
+              {
+                "code": "BR-FR-CO-07_BT-9",
+                "message": "La date d’échéance (BT-9), si présente, doit être postérieure ou égale à la date de facture (BT-2).",
+                "severity": "warning",
+                "path": "/*:Invoice[1]",
+                "hint": "This warning is informational and did not block invoice creation."
+              }
+            ],
+            "files": {
+              "ubl": "/v3/invoices/123e4567-e89b-12d3-a456-426614174000/files/ubl",
+              "cii": "/v3/invoices/123e4567-e89b-12d3-a456-426614174000/files/cii",
+              "facturx": "/v3/invoices/123e4567-e89b-12d3-a456-426614174000/files/facturx"
+            }
+          }
   - name: 400 Response
     description: La facture ne peut pas être publiée
     request:
@@ -124,5 +144,5 @@ docs: |-
 
   **Comportement:**
   - réservé aux factures encore en brouillon
-  - ne retourne pas de payload en cas de succès (`204`)
+  - retourne `200` avec `invoiceId`, `files` et d'éventuels `warnings`
   - échoue si la facture n'est pas dans un état publiable

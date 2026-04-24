@@ -46,7 +46,7 @@ examples:
       method: GET
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
     response:
       status: 400
@@ -61,7 +61,7 @@ examples:
       method: GET
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
     response:
       status: 401
@@ -76,7 +76,7 @@ examples:
       method: GET
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
     response:
       status: 403
@@ -91,7 +91,7 @@ examples:
       method: GET
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
     response:
       status: 500

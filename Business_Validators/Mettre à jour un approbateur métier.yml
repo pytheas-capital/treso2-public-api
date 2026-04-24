@@ -90,7 +90,7 @@ examples:
       method: PUT
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
       body:
@@ -119,7 +119,7 @@ examples:
       method: PUT
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
       body:
@@ -148,7 +148,7 @@ examples:
       method: PUT
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
       body:
@@ -177,7 +177,7 @@ examples:
       method: PUT
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
       body:

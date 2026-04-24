@@ -12,12 +12,16 @@ http:
     type: json
     data: |-
       {
-        "processConditionCode": "205",
-        "comment": "Approved by buyer"
+        "processConditionCode": "206",
+        "comment": "Suspended pending supporting documents",
+        "eventData": {
+          "reasonCode": "MISSING_SUPPORTING_DOCUMENT",
+          "reason": "Awaiting signed delivery receipt"
+        }
       }
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant unique de la facture (UUID)
   auth: inherit
@@ -67,6 +71,97 @@ examples:
             "cdar": {
               "generated": true,
               "status": "queued"
+            }
+          }
+  - name: 200 Response (206 suspended)
+    description: Un événement suspendu avec données complémentaires a été appliqué.
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/lifecycle-events"
+      method: POST
+      params:
+        - name: invoiceId
+          value: "123e4567-e89b-12d3-a456-426614174000"
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: json
+        data: |-
+          {
+            "processConditionCode": "206",
+            "comment": "Suspended pending supporting documents",
+            "eventData": {
+              "reasonCode": "MISSING_SUPPORTING_DOCUMENT",
+              "reason": "Awaiting signed delivery receipt"
+            }
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
+            "invoiceDirection": "outgoing",
+            "appliedEvent": {
+              "processConditionCode": "206",
+              "label": "Suspended",
+              "comment": "Suspended pending supporting documents",
+              "appliedAt": "2026-04-24T09:30:00.000Z"
+            },
+            "cdar": {
+              "generated": true,
+              "status": "queued"
+            }
+          }
+  - name: 200 Response (211 payment sent)
+    description: Un événement de paiement transmis a été appliqué.
+    request:
+      url: "{{baseUrl}}/v3/invoices/:invoiceId/lifecycle-events"
+      method: POST
+      params:
+        - name: invoiceId
+          value: "123e4567-e89b-12d3-a456-426614174000"
+          type: path
+          description: Identifiant unique de la facture (UUID)
+      body:
+        type: json
+        data: |-
+          {
+            "processConditionCode": "211",
+            "comment": "Payment instruction sent",
+            "eventData": {
+              "paymentInfo": {
+                "amount": 1410,
+                "currency": "EUR",
+                "paymentDate": "2026-04-24"
+              }
+            }
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
+            "invoiceDirection": "outgoing",
+            "appliedEvent": {
+              "processConditionCode": "211",
+              "label": "Payment sent",
+              "comment": "Payment instruction sent",
+              "appliedAt": "2026-04-24T10:15:00.000Z"
+            },
+            "cdar": {
+              "generated": true,
+              "status": "generated"
             }
           }
   - name: 400 Response
@@ -186,10 +281,13 @@ docs: |-
   **Exemples de codes supportés:**
   - `204` prise en charge
   - `205` approuvée
+  - `206` suspendue (`eventData.reasonCode`, `eventData.reason`)
+  - `207` litige (`eventData.reasonCode`, `eventData.reason`)
+  - `211` paiement transmis (`eventData.paymentInfo.amount`, `currency`, `paymentDate`)
   - `213` partiellement approuvée
   - `214` complétée
   - `224` demande de paiement direct
   - `225` cession / affacturage notifié
 
   **Note:**
-  - pour `225`, `226`, `227` et `228`, fournir aussi `eventData.reasonCode` et `eventData.effectiveDate`
+  - pour `225`, `226`, `227` et `228`, fournir `eventData.effectiveDate` ainsi que les champs métier requis par le code choisi

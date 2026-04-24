@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/invoices/:invoiceId/payments"
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant unique de la facture (UUID)
   body:
@@ -38,7 +38,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -73,7 +73,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -98,7 +98,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -123,7 +123,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -148,7 +148,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -173,7 +173,7 @@ examples:
       method: PATCH
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:

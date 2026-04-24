@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/receipt-slips/:receiptSlipId"
   params:
     - name: receiptSlipId
-      value: ""
+      value: "RSID-2024-001"
       type: path
   body:
     type: json
@@ -56,7 +56,7 @@ examples:
       method: PATCH
       params:
         - name: receiptSlipId
-          value: ""
+          value: "RSID-2024-001"
           type: path
       body:
         type: json
@@ -131,7 +131,7 @@ examples:
       method: PATCH
       params:
         - name: receiptSlipId
-          value: ""
+          value: "RSID-2024-001"
           type: path
       body:
         type: json
@@ -174,7 +174,7 @@ examples:
       method: PATCH
       params:
         - name: receiptSlipId
-          value: ""
+          value: "RSID-2024-001"
           type: path
       body:
         type: json
@@ -217,7 +217,7 @@ examples:
       method: PATCH
       params:
         - name: receiptSlipId
-          value: ""
+          value: "RSID-2024-001"
           type: path
       body:
         type: json
@@ -260,7 +260,7 @@ examples:
       method: PATCH
       params:
         - name: receiptSlipId
-          value: ""
+          value: "RSID-2024-001"
           type: path
       body:
         type: json

@@ -33,11 +33,11 @@ examples:
       method: DELETE
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
     response:
@@ -53,11 +53,11 @@ examples:
       method: DELETE
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
     response:
@@ -73,11 +73,11 @@ examples:
       method: DELETE
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
     response:
@@ -93,11 +93,11 @@ examples:
       method: DELETE
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
     response:
@@ -113,11 +113,11 @@ examples:
       method: DELETE
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
     response:
@@ -133,11 +133,11 @@ examples:
       method: DELETE
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
         - name: accountNumber
-          value: ""
+          value: "401000"
           type: path
           description: Numéro de compte de la ligne comptable
     response:

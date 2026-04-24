@@ -60,7 +60,7 @@ examples:
       method: POST
       params:
         - name: purchaseOrderId
-          value: ""
+          value: "POID-2026-001"
           type: path
           description: Identifiant du bon de commande auto généré par la plateforme.
       body:
@@ -82,7 +82,7 @@ examples:
       method: POST
       params:
         - name: purchaseOrderId
-          value: ""
+          value: "POID-2026-001"
           type: path
           description: Identifiant du bon de commande auto généré par la plateforme.
       body:
@@ -104,7 +104,7 @@ examples:
       method: POST
       params:
         - name: purchaseOrderId
-          value: ""
+          value: "POID-2026-001"
           type: path
           description: Identifiant du bon de commande auto généré par la plateforme.
       body:
@@ -126,7 +126,7 @@ examples:
       method: POST
       params:
         - name: purchaseOrderId
-          value: ""
+          value: "POID-2026-001"
           type: path
           description: Identifiant du bon de commande auto généré par la plateforme.
       body:

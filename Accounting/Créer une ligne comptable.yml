@@ -157,7 +157,7 @@ examples:
       method: POST
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
       body:
@@ -195,7 +195,7 @@ examples:
       method: POST
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
       body:
@@ -233,7 +233,7 @@ examples:
       method: POST
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
       body:
@@ -271,7 +271,7 @@ examples:
       method: POST
       params:
         - name: id
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant de la facture ou de l'avoir
       body:

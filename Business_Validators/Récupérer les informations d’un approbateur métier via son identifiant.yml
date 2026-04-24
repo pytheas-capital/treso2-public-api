@@ -64,7 +64,7 @@ examples:
       method: GET
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
     response:
@@ -80,7 +80,7 @@ examples:
       method: GET
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
     response:
@@ -96,7 +96,7 @@ examples:
       method: GET
       params:
         - name: businessValidatorId
-          value: ""
+          value: "BV-2026-001"
           type: path
           description: Identifiant unique de l’approbateur métier au sein de TRESO2.
     response:

@@ -14,7 +14,7 @@ http:
       type: path
       description: Format du fichier généré à récupérer
     - name: invoiceId
-      value: 019d8b22-1fe5-76ea-97b3-9a2899a90a33
+      value: 123e4567-e89b-12d3-a456-426614174000
       type: path
       description: Identifiant unique de la facture (UUID)
   auth: inherit

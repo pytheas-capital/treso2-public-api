@@ -93,7 +93,7 @@ examples:
       method: PATCH
       params:
         - name: analyticalAxisId
-          value: ""
+          value: "AXIS-2026-001"
           type: path
       body:
         type: json
@@ -123,7 +123,7 @@ examples:
       method: PATCH
       params:
         - name: analyticalAxisId
-          value: ""
+          value: "AXIS-2026-001"
           type: path
       body:
         type: json
@@ -153,7 +153,7 @@ examples:
       method: PATCH
       params:
         - name: analyticalAxisId
-          value: ""
+          value: "AXIS-2026-001"
           type: path
       body:
         type: json
@@ -183,7 +183,7 @@ examples:
       method: PATCH
       params:
         - name: analyticalAxisId
-          value: ""
+          value: "AXIS-2026-001"
           type: path
       body:
         type: json

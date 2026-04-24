@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/v3/invoices/:invoiceId/start-validation"
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant unique de la facture (UUID)
   body:
@@ -41,7 +41,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -66,8 +66,8 @@ examples:
         type: json
         data: |-
           {
-            "unprocessedInvoice": "",
-            "processedInvoice": ""
+            "unprocessedInvoice": "123e4567-e89b-12d3-a456-426614174000",
+            "processedInvoice": "123e4567-e89b-12d3-a456-426614174000"
           }
   - name: 201 Response
     request:
@@ -75,7 +75,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -100,8 +100,8 @@ examples:
         type: json
         data: |-
           {
-            "unprocessedInvoice": "",
-            "processedInvoice": ""
+            "unprocessedInvoice": "123e4567-e89b-12d3-a456-426614174000",
+            "processedInvoice": "123e4567-e89b-12d3-a456-426614174000"
           }
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
@@ -110,7 +110,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -138,7 +138,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -166,7 +166,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -194,7 +194,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
@@ -222,7 +222,7 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:

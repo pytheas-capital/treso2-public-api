@@ -10,14 +10,14 @@ http:
   url: "{{baseUrl}}/v3/invoices/:invoiceId/comments"
   params:
     - name: invoiceId
-      value: ""
+      value: "123e4567-e89b-12d3-a456-426614174000"
       type: path
       description: Identifiant unique de la facture (UUID)
   body:
     type: json
     data: |-
       {
-        "comment": ""
+        "comment": "Invoice reviewed and approved for publication"
       }
   auth: inherit
 
@@ -35,14 +35,14 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
         type: json
         data: |-
           {
-            "comment": ""
+            "comment": "Invoice reviewed and approved for publication"
           }
     response:
       status: 200
@@ -54,9 +54,9 @@ examples:
         type: json
         data: |-
           {
-            "comment": "",
-            "date": "",
-            "user": ""
+            "comment": "Invoice reviewed and approved for publication",
+            "date": "2026-04-24T09:45:00.000Z",
+            "user": "user@example.com"
           }
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
@@ -65,14 +65,14 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
         type: json
         data: |-
           {
-            "comment": ""
+            "comment": "Invoice reviewed and approved for publication"
           }
     response:
       status: 400
@@ -87,14 +87,14 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
         type: json
         data: |-
           {
-            "comment": ""
+            "comment": "Invoice reviewed and approved for publication"
           }
     response:
       status: 401
@@ -109,14 +109,14 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
         type: json
         data: |-
           {
-            "comment": ""
+            "comment": "Invoice reviewed and approved for publication"
           }
     response:
       status: 403
@@ -131,14 +131,14 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
         type: json
         data: |-
           {
-            "comment": ""
+            "comment": "Invoice reviewed and approved for publication"
           }
     response:
       status: 404
@@ -153,14 +153,14 @@ examples:
       method: POST
       params:
         - name: invoiceId
-          value: ""
+          value: "123e4567-e89b-12d3-a456-426614174000"
           type: path
           description: Identifiant unique de la facture (UUID)
       body:
         type: json
         data: |-
           {
-            "comment": ""
+            "comment": "Invoice reviewed and approved for publication"
           }
     response:
       status: 500

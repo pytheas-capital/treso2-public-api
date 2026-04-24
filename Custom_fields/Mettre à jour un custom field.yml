@@ -45,7 +45,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "CF-2026-001"
           type: path
       body:
         type: json
@@ -77,7 +77,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "CF-2026-001"
           type: path
       body:
         type: json
@@ -109,7 +109,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "CF-2026-001"
           type: path
       body:
         type: json
@@ -141,7 +141,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "CF-2026-001"
           type: path
       body:
         type: json
@@ -173,7 +173,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "CF-2026-001"
           type: path
       body:
         type: json
@@ -205,7 +205,7 @@ examples:
       method: PATCH
       params:
         - name: id
-          value: ""
+          value: "CF-2026-001"
           type: path
       body:
         type: json

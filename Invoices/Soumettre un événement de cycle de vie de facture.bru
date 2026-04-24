@@ -11,12 +11,16 @@ post {
 }
 
 params:path {
-  invoiceId: 
+  invoiceId: 123e4567-e89b-12d3-a456-426614174000
 }
 
 body:json {
   {
-    "processConditionCode": "205",
-    "comment": "Approved by buyer"
+    "processConditionCode": "206",
+    "comment": "Suspended pending supporting documents",
+    "eventData": {
+      "reasonCode": "MISSING_SUPPORTING_DOCUMENT",
+      "reason": "Awaiting signed delivery receipt"
+    }
   }
 }

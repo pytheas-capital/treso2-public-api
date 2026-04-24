@@ -70,9 +70,20 @@ examples:
     response:
       status: 201
       statusText: Created
+      headers:
+        - name: Content-Type
+          value: application/json
       body:
-        type: text
-        data: ""
+        type: json
+        data: |-
+          [
+            {
+              "invoiceId": "123e4567-e89b-12d3-a456-426614174000",
+              "downloadLinks": [
+                "{{baseUrl}}/v3/invoices/123e4567-e89b-12d3-a456-426614174000/files/facturx"
+              ]
+            }
+          ]
   - name: 400 Response
     description: Une erreur de validation de la donnée en entrée est survenue ou la requête est mal formée
     request:

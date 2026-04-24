@@ -127,7 +127,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691b"
           type: path
         - name: customerRegistrationId
           value: "123456789"
@@ -150,7 +150,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691b"
           type: path
         - name: customerRegistrationId
           value: "123456789"
@@ -173,7 +173,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691b"
           type: path
         - name: customerRegistrationId
           value: "123456789"
@@ -196,7 +196,7 @@ examples:
       method: GET
       params:
         - name: companyId
-          value: ""
+          value: "0199cd10-4c11-7199-b0df-6747d1f3691b"
           type: path
         - name: customerRegistrationId
           value: "123456789"

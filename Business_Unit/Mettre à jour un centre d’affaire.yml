@@ -82,7 +82,7 @@ examples:
       method: PUT
       params:
         - name: businessUnitId
-          value: ""
+          value: "BU-2026-001"
           type: path
           description: Identifiant unique du centre d’affaire au sein de TRESO2
       body:
@@ -108,7 +108,7 @@ examples:
       method: PUT
       params:
         - name: businessUnitId
-          value: ""
+          value: "BU-2026-001"
           type: path
           description: Identifiant unique du centre d’affaire au sein de TRESO2
       body:
@@ -134,7 +134,7 @@ examples:
       method: PUT
       params:
         - name: businessUnitId
-          value: ""
+          value: "BU-2026-001"
           type: path
           description: Identifiant unique du centre d’affaire au sein de TRESO2
       body:
@@ -160,7 +160,7 @@ examples:
       method: PUT
       params:
         - name: businessUnitId
-          value: ""
+          value: "BU-2026-001"
           type: path
           description: Identifiant unique du centre d’affaire au sein de TRESO2
       body:

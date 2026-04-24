@@ -21,7 +21,7 @@ http:
         "dueDate": "2026-04-14",
         "currency": "EUR",
         "taxCurrencyCode": "EUR",
-        "vatDueDateCode": "3",
+        "vatDueDateCode": "INVOICE_ISSUE_DATE",
         "operationCategory": "B1",
         "purchaseOrderId": "PO-2026-001",
         "businessUnitCode": "BU-001",
@@ -108,7 +108,7 @@ http:
             },
             "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
             "lineVatExemptionCode": "VATEX-EU-O",
-            "lineVatDueDateCode": "3",
+            "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
             "lineNoteSubjectCode": "REG",
             "articleAttributes": [
               {
@@ -301,7 +301,7 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: 200 Response (B2Bd nominal invoice)
+  - name: 201 Response (B2Bd nominal invoice)
     description: Le brouillon a été créé avec succès. Retourne la facture complète.
     request:
       url: "{{baseUrl}}/v3/invoices/draft"
@@ -319,7 +319,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -406,7 +406,7 @@ examples:
                 },
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -591,8 +591,8 @@ examples:
             }
           }
     response:
-      status: 200
-      statusText: OK
+      status: 201
+      statusText: Created
       headers:
         - name: Content-Type
           value: application/json
@@ -609,7 +609,7 @@ examples:
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "contractRef": "CONTRACT-2026-001",
@@ -680,7 +680,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -764,7 +764,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "S1",
             "purchaseOrderId": "PO-INTL-2026-001",
             "businessUnitCode": "BU-INTL",
@@ -851,7 +851,7 @@ examples:
                 },
                 "lineVatExemptionText": "Autoliquidation",
                 "lineVatExemptionCode": "VATEX-EU-AE",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -1044,8 +1044,8 @@ examples:
             }
           }
     response:
-      status: 200
-      statusText: OK
+      status: 201
+      statusText: Created
       headers:
         - name: Content-Type
           value: application/json
@@ -1062,7 +1062,7 @@ examples:
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "contractRef": "CONTRACT-2026-001",
@@ -1133,7 +1133,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -1217,7 +1217,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-B2G-001",
             "businessUnitCode": "BU-PUBLIC",
@@ -1313,7 +1313,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -1476,8 +1476,8 @@ examples:
             }
           }
     response:
-      status: 200
-      statusText: OK
+      status: 201
+      statusText: Created
       headers:
         - name: Content-Type
           value: application/json
@@ -1494,7 +1494,7 @@ examples:
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "contractRef": "CONTRACT-2026-001",
@@ -1565,7 +1565,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -1649,7 +1649,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-B2C-001",
             "businessUnitCode": "BU-CONSUMER",
@@ -1735,7 +1735,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -1851,8 +1851,8 @@ examples:
             }
           }
     response:
-      status: 200
-      statusText: OK
+      status: 201
+      statusText: Created
       headers:
         - name: Content-Type
           value: application/json
@@ -1869,7 +1869,7 @@ examples:
             "issueDate": "2026-01-15",
             "dueDate": "2026-02-15",
             "currency": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "contractRef": "CONTRACT-2026-001",
@@ -1940,7 +1940,7 @@ examples:
                 "lineSeller": "",
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -2024,7 +2024,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -2111,7 +2111,7 @@ examples:
                 },
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -2319,7 +2319,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "S1",
             "purchaseOrderId": "PO-INTL-2026-001",
             "businessUnitCode": "BU-INTL",
@@ -2406,7 +2406,7 @@ examples:
                 },
                 "lineVatExemptionText": "Autoliquidation",
                 "lineVatExemptionCode": "VATEX-EU-AE",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -2622,7 +2622,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-B2G-001",
             "businessUnitCode": "BU-PUBLIC",
@@ -2718,7 +2718,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -2904,7 +2904,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-B2C-001",
             "businessUnitCode": "BU-CONSUMER",
@@ -2990,7 +2990,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -3129,7 +3129,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -3216,7 +3216,7 @@ examples:
                 },
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -3424,7 +3424,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "S1",
             "purchaseOrderId": "PO-INTL-2026-001",
             "businessUnitCode": "BU-INTL",
@@ -3511,7 +3511,7 @@ examples:
                 },
                 "lineVatExemptionText": "Autoliquidation",
                 "lineVatExemptionCode": "VATEX-EU-AE",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -3727,7 +3727,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-B2G-001",
             "businessUnitCode": "BU-PUBLIC",
@@ -3823,7 +3823,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -4009,7 +4009,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-B2C-001",
             "businessUnitCode": "BU-CONSUMER",
@@ -4095,7 +4095,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -4234,7 +4234,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -4321,7 +4321,7 @@ examples:
                 },
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -4529,7 +4529,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "S1",
             "purchaseOrderId": "PO-INTL-2026-001",
             "businessUnitCode": "BU-INTL",
@@ -4616,7 +4616,7 @@ examples:
                 },
                 "lineVatExemptionText": "Autoliquidation",
                 "lineVatExemptionCode": "VATEX-EU-AE",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -4832,7 +4832,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-B2G-001",
             "businessUnitCode": "BU-PUBLIC",
@@ -4928,7 +4928,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -5114,7 +5114,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-B2C-001",
             "businessUnitCode": "BU-CONSUMER",
@@ -5200,7 +5200,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -5339,7 +5339,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-001",
             "businessUnitCode": "BU-001",
@@ -5426,7 +5426,7 @@ examples:
                 },
                 "lineVatExemptionText": "TVA non applicable - article 259 B du CGI",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -5634,7 +5634,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "S1",
             "purchaseOrderId": "PO-INTL-2026-001",
             "businessUnitCode": "BU-INTL",
@@ -5721,7 +5721,7 @@ examples:
                 },
                 "lineVatExemptionText": "Autoliquidation",
                 "lineVatExemptionCode": "VATEX-EU-AE",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -5937,7 +5937,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-2026-B2G-001",
             "businessUnitCode": "BU-PUBLIC",
@@ -6033,7 +6033,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
@@ -6219,7 +6219,7 @@ examples:
             "dueDate": "2026-04-14",
             "currency": "EUR",
             "taxCurrencyCode": "EUR",
-            "vatDueDateCode": "3",
+            "vatDueDateCode": "INVOICE_ISSUE_DATE",
             "operationCategory": "B1",
             "purchaseOrderId": "PO-B2C-001",
             "businessUnitCode": "BU-CONSUMER",
@@ -6305,7 +6305,7 @@ examples:
                 },
                 "lineVatExemptionText": "Aucune exonération",
                 "lineVatExemptionCode": "VATEX-EU-O",
-                "lineVatDueDateCode": "3",
+                "lineVatDueDateCode": "INVOICE_ISSUE_DATE",
                 "lineNoteSubjectCode": "REG",
                 "articleAttributes": [
                   {
