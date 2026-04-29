@@ -25,8 +25,6 @@ http:
         "firstName": "Pierre",
         "lastName": "Martin",
         "email": "pierre.martin@societe.com",
-        "electronicAddress": "80770824300066",
-        "electronicAddressSchemeId": "0009",
         "ledgerAccountNumber": "401000",
         "auxiliaryAccountNumber": "AUX123",
         "supplierIdentifiers": [
